@@ -1,6 +1,20 @@
+# Public snapshot: do not deploy private agent state or uploaded source archives.
+/.agents/
+/attached_assets/
 # The format of this file is identical to `.dockerignore`.
 # It is used to reduce the size of deployed images to make the process of publishing faster.
 
 # No need to store the pnpm store twice.
 .local
 /generated-artifacts/
+
+# Offline terrain research is not a production service or browser asset.
+/research/prediction/data/*.npz
+/research/prediction/data/*.tif
+/research/prediction/results/
+/research/prediction/data/melbourne-*
+/research/prediction/data/crowd-*
+/research/prediction/data/sensors.*
+/attached_assets/isense-uiuc-v2.3_1791703811550.zip
+**/__pycache__/
+**/*.pyc

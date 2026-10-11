@@ -1,12 +1,13 @@
 import type { DemoRoute } from './route-scoring';
 import type { SensoryMetric } from './campus-observations';
+import { usableAutomaticSunlight } from './solar-ranking';
 
 const fields = { noise: 'noiseCost', crowds: 'crowdCost', sunlight: 'sunExposureCost' } as const;
 export type RankingMetricEvidence = {
   metric: SensoryMetric;
   displayValue: number | null;
   rankingValue: number;
-  status: 'verified' | 'estimate' | 'mixed' | 'demo' | 'unknown' | 'excluded';
+  status: 'verified' | 'estimate' | 'mixed' | 'demo' | 'unknown' | 'excluded' | 'modeled';
   verifiedPercent: number;
   estimatedPercent: number;
   unknownPercent: number;
@@ -23,6 +24,12 @@ const percent = (value: number | undefined, fallback: number) =>
  * crowd density or sunlight. Research demo routes retain their supplied values.
  */
 export function rankingMetricEvidence(route: DemoRoute, metric: SensoryMetric): RankingMetricEvidence {
+  const sunlight = metric === 'sunlight' ? usableAutomaticSunlight(route) : null;
+  if (sunlight) return {
+    metric, displayValue: sunlight.value! * 100, rankingValue: sunlight.value! * 100,
+    status: 'modeled', verifiedPercent: 0, estimatedPercent: 100, unknownPercent: 0, provisional: true,
+    explanation: 'Historical terrain model: direct-sun percentage × sunlight weight, using existing tolerance penalties. Experimental, not field-validated comfort or live weather.',
+  };
   if (metric === 'sunlight' && route.directSunlightExcluded) return {
     metric, displayValue: 0, rankingValue: 0, status: 'excluded',
     verifiedPercent: 0, estimatedPercent: 0, unknownPercent: 0, provisional: false,

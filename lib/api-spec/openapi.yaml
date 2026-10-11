@@ -11,6 +11,25 @@ tags:
   - name: health
     description: Health operations
 paths:
+  /sunlight-model/grid/{digest}:
+    get:
+      operationId: getSunlightModelGrid
+      summary: Reviewed immutable historical UIUC terrain cache for client-side prediction
+      parameters:
+        - name: digest
+          in: path
+          required: true
+          schema:
+            type: string
+            enum: [109eca2ad7406836a932d1d50297488ae60491a69efa4e099c08d6f4fd38b902]
+      responses:
+        "200":
+          description: SHA-256 validated NumPy cache; not live observations
+          content:
+            application/octet-stream:
+              schema: { type: string, format: binary }
+        "503":
+          description: Model cache or App Storage unavailable; no prediction applied
   /community-reports:
     get:
       operationId: listCommunityReports

@@ -10,13 +10,19 @@
   --line: #d3e2eb;
   --orange: #bd7445;
   --orange-pale: #fff2e8;
-  --isense-visible-height: calc(var(--isense-visual-viewport-height, 100dvh) - var(--isense-dev-keyboard-inset, 0px));
+  --isense-viewport-height: 100vh;
+  --isense-visible-height: calc(var(--isense-keyboard-height, var(--isense-viewport-height)) - var(--isense-dev-keyboard-inset, 0px));
 }
-html, body, #root { height: 100%; min-height: 0; }
-body { background: var(--paper); color: var(--ink); }
+@supports (height:100dvh) { :root { --isense-viewport-height:100dvh; } }
+/* Avoid an inherited 100% root retaining a shorter installed-PWA viewport.
+   The hook may select a larger measured CSS viewport only after hit-testing it. */
+html, body, #root { height: var(--isense-viewport-height); min-height: 0; }
+html, body { overflow:hidden; overscroll-behavior:none; }
+body { margin:0; background: var(--paper); color: var(--ink); }
 .app-shell {
-  position: fixed; top: var(--isense-visual-viewport-top, 0px); left: 0; right: 0;
-  height: 100vh; height: var(--isense-visible-height); min-height: 0; overflow: hidden;
+  position:fixed; top:var(--isense-keyboard-top,0px); left:0; right:0;
+  display:flex; flex-direction:column; width:100%; margin:0; padding:0;
+  height:var(--isense-visible-height); min-height:0; overflow:hidden;
 }
 .topbar {
   flex: none; display: flex; align-items: center; min-height: calc(56px + var(--isense-safe-area-top));
@@ -56,23 +62,23 @@ body { background: var(--paper); color: var(--ink); }
 .environment-context > span { font-size:13px; white-space:normal; }
 .demo-disclosure { width:100%; min-height:36px; padding:7px 10px; margin:0 0 7px; border-color:#d7e5ed; background:#eaf3f7; color:#294c68; font-size:12px; line-height:1.35; }
 .demo-disclosure strong { color:var(--blue-deep); }
-.map-workspace { position:relative; display:block; flex:1 1 auto; min-height:0; }
-.map-workspace .map-card { position:absolute; inset:0; display:flex; flex-direction:column; min-height:0; overflow:hidden; }
-.map-workspace .map-frame { flex:1 1 auto; width:100%; height:100%; min-height:0; border-radius:17px; background:#e7f1f6; }
+.map-workspace { display:flex; flex-direction:column; flex:1 1 auto; min-height:0; gap:8px; overflow:hidden; }
+.map-section { position:relative; display:grid; grid-template-columns:minmax(0,1fr); grid-template-rows:minmax(0,1fr); flex:1 1 0; min-width:0; min-height:0; overflow:hidden; border-radius:17px; }
+/* Stretch the card into its allocated track. Avoid percentage-height chains
+   that can resolve to zero after a hidden tab/search surface is revealed. */
+.map-workspace .map-card { position:relative; inset:auto; display:flex; flex-direction:column; align-self:stretch; height:auto; min-height:0; overflow:hidden; }
+.map-workspace .map-frame { flex:1 1 0; width:100%; height:auto; min-height:0; border-radius:17px; background:#e7f1f6; }
+.map-workspace .google-map { width:100%; height:100%; min-height:0; }
 .map-workspace .map-card[data-map-state="disabled"],
-.map-workspace .map-card[data-map-state="error"] { position:relative; inset:auto; display:block; height:auto; min-height:0; overflow:visible; }
+.map-workspace .map-card[data-map-state="error"] { display:block; height:auto; min-height:0; overflow:hidden; }
 .map-workspace .map-frame[data-map-state="disabled"],
 .map-workspace .map-frame[data-map-state="error"] { height:auto; min-height:74px; }
-.map-workspace:has(> .map-card[data-map-state="disabled"]),
-.map-workspace:has(> .map-card[data-map-state="error"]) { display:flex; flex-direction:column; gap:8px; }
+.map-workspace:has(.map-card[data-map-state="disabled"]) .map-section,
+.map-workspace:has(.map-card[data-map-state="error"]) .map-section { flex:0 1 auto; max-height:40%; overflow:auto; }
 .map-workspace .location-card {
-  position:absolute; z-index:5; right:0; bottom:9px; left:0; max-height:calc(100% - 18px);
-  margin:0; padding:12px; overflow-y:auto; overscroll-behavior:contain;
+  position:relative; inset:auto; flex:0 0 auto; min-height:0; max-height:55%;
+  margin:0; padding:10px; overflow-y:auto; overscroll-behavior:contain;
   border:1px solid #d9e5ed; border-radius:18px; background:#fff; box-shadow:0 8px 24px #31567017;
-}
-.map-workspace:has(> .map-card[data-map-state="disabled"]) .location-card,
-.map-workspace:has(> .map-card[data-map-state="error"]) .location-card {
-  position:relative; inset:auto; max-height:none; flex:none; overflow:visible;
 }
 .map-screen .location-controls { display:grid; grid-template-columns:minmax(0,1fr) 44px; gap:5px 8px; margin:0; }
 .map-screen .location-search-origin { grid-column:1; grid-row:1; }
@@ -86,7 +92,7 @@ body { background: var(--paper); color: var(--ink); }
 .map-screen .location-card > .trip-message { max-height:4.1em; margin:5px 0 0; overflow:auto; color:#294c68; font-size:12px; line-height:1.4; }
 .map-screen .route-fetch-button { flex:none; }
 .map-workspace .map-note { display:none; }
-.map-workspace > .environment-context {
+.map-section > .environment-context {
   position:absolute; z-index:28; top:10px; left:10px; max-width:calc(100% - 76px);
   margin:0; min-height:44px; padding:0 10px; background:#f8fcfbeF; box-shadow:0 2px 10px #294c6812;
 }
@@ -100,7 +106,7 @@ body { background: var(--paper); color: var(--ink); }
 .map-screen .location-controls > .location-search-destination { grid-column:1; grid-row:2; }
 .trip-message[data-invalid="true"] { color:#914c32; }
 .mobile-navigation {
-  flex:none; position:relative; z-index:20; width:100%; min-height:60px; margin:0;
+  flex:none; position:relative; inset:auto; transform:none; z-index:20; width:100%; min-height:60px; margin:0;
   display:grid; grid-template-columns:repeat(4,minmax(0,1fr));
   padding:4px max(12px,var(--isense-safe-area-right)) calc(4px + var(--isense-safe-area-bottom)) max(12px,var(--isense-safe-area-left));
   background:#f5f9fb; border-top:1px solid #d8e5ed; box-shadow:0 -3px 14px #294c6809;
@@ -150,8 +156,7 @@ body { background: var(--paper); color: var(--ink); }
 .native-comfort .acceptance-options input:checked + span { border-color:#dba982; background:#fff2e8; color:#875637; }
 .native-comfort .acceptance-options input:focus-visible + span { outline:3px solid #6996b1; outline-offset:2px; }
 .map-pick-warning { position:absolute; z-index:6; top:100px; left:12px; right:64px; padding:10px; margin:0; background:#fff2e8; color:#875637; border-radius:10px; }
-.map-screen .map-workspace:not(:has([data-map-state="disabled"],[data-map-state="error"])) .location-card { bottom:32px; }
-.map-workspace:has([data-map-state="disabled"],[data-map-state="error"]) > .environment-context {
+.map-section:has([data-map-state="disabled"],[data-map-state="error"]) > .environment-context {
   position:relative; top:auto; left:auto; right:auto; order:0; width:100%; max-width:none; margin:0 0 6px;
 }
 .native-extra-time { display:grid; grid-template-columns:30px minmax(0,1fr) auto; align-items:center; gap:7px; min-height:52px; margin-top:5px; padding-top:4px; border-top:1px solid #e8eff3; }
@@ -238,11 +243,15 @@ body { background: var(--paper); color: var(--ink); }
 .environment-timing { color:#365e78; font-weight:700; }
 @keyframes sheet-fade { from { opacity:0; } to { opacity:1; } }
 @keyframes sheet-rise { from { opacity:.92; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }
-.install-invitation { position:fixed; z-index:24; left:50%; bottom:calc(70px + var(--isense-safe-area-bottom)); transform:translateX(-50%); margin:0; }
+.install-invitation { position:relative; inset:auto; flex:none; align-self:center; width:min(760px,calc(100% - 24px)); max-height:25%; overflow:auto; transform:none; margin:0 auto; }
 .pwa-update-floating { bottom:calc(68px + var(--isense-safe-area-bottom) + 8px); }
 .inline-status { bottom:calc(68px + var(--isense-safe-area-bottom)); }
 .help-backdrop { z-index:1000; padding:max(12px,var(--isense-safe-area-top)) 12px calc(12px + var(--isense-safe-area-bottom)); }
 .help-dialog { max-height:100%; }
+.layout-diagnostics summary { min-height:44px; }
+.layout-diagnostics-controls { display:flex; flex-wrap:wrap; gap:8px; }
+.layout-diagnostics-controls button { min-height:44px; padding:8px 10px; border:1px solid var(--line); border-radius:10px; background:#fff; color:var(--ink); }
+.layout-diagnostics pre { max-height:220px; overflow:auto; white-space:pre-wrap; overflow-wrap:anywhere; font-size:11px; }
 button,a,input,summary { -webkit-tap-highlight-color:transparent; }
 :focus-visible { outline:3px solid #477da2 !important; outline-offset:2px; }
 @media (max-width:767px) {
@@ -270,29 +279,10 @@ button,a,input,summary { -webkit-tap-highlight-color:transparent; }
   .app-screen { padding-top:6px; padding-bottom:6px; }
   .mobile-navigation { min-height:47px; padding-top:2px; padding-bottom:calc(2px + var(--isense-safe-area-bottom)); }
   .mobile-navigation button { min-height:44px; flex-direction:row; }
-  .map-workspace .map-frame { min-height:105px; }
 }
 
-/* Keep keyboard-driven viewport resizing inside the same full-screen shell.
-   GoogleCampusMap remains mounted; only its visual region yields to the planner. */
-html:is([data-keyboard-visible="true"],[style*="--isense-dev-keyboard-inset"]) .app-shell { top:var(--isense-visual-viewport-top,0px); }
-html:is([data-keyboard-visible="true"],[style*="--isense-dev-keyboard-inset"]) .map-screen .screen-heading,
-html:is([data-keyboard-visible="true"],[style*="--isense-dev-keyboard-inset"]) .map-screen .environment-context,
-html:is([data-keyboard-visible="true"],[style*="--isense-dev-keyboard-inset"]) .map-screen .demo-disclosure { display:none; }
-html:is([data-keyboard-visible="true"],[style*="--isense-dev-keyboard-inset"]) .map-screen { padding-top:4px; padding-bottom:4px; }
-html:is([data-keyboard-visible="true"],[style*="--isense-dev-keyboard-inset"]) .map-workspace { display:flex; flex:1 1 auto; min-height:0; }
-html:is([data-keyboard-visible="true"],[style*="--isense-dev-keyboard-inset"]) .map-workspace .map-card { display:none; }
-html:is([data-keyboard-visible="true"],[style*="--isense-dev-keyboard-inset"]) .map-workspace .location-card {
-  position:relative; inset:auto; display:flex; flex:1 1 auto; flex-direction:column;
-  min-height:0; max-height:none; margin:0; overflow:hidden;
-}
-html:is([data-keyboard-visible="true"],[style*="--isense-dev-keyboard-inset"]) .map-screen .location-controls {
-  flex:1 1 auto; min-height:0; overflow-x:hidden; overflow-y:auto; overscroll-behavior:contain;
-}
-html:is([data-keyboard-visible="true"],[style*="--isense-dev-keyboard-inset"]) .map-screen .location-card > .trip-message {
-  flex:none; max-height:3.2em; overflow:auto; font-size:12px;
-}
-html:is([data-keyboard-visible="true"],[style*="--isense-dev-keyboard-inset"]) .map-screen .route-fetch-button { min-height:44px; margin-top:5px; }
+/* Full-screen search is the only search surface. It hides the mounted map,
+   planner and tabs, and owns an independent keyboard-aware scrollport. */
 html:is([data-keyboard-visible="true"],[style*="--isense-dev-keyboard-inset"]) .preferences-screen .native-preference-actions {
   position:sticky; bottom:0; z-index:4; margin-top:auto; padding:6px 0 2px;
   background:linear-gradient(to bottom,#f3f8fb00 0%,#f3f8fb 24%);
@@ -301,14 +291,14 @@ html:is([data-keyboard-visible="true"],[style*="--isense-dev-keyboard-inset"]) .
 /* Modals are portalled outside the app root; use the visual viewport and the
    shell's simulated/real safe-area values, never a second raw env inset. */
 .native-sheet-backdrop {
-  top:var(--isense-visual-viewport-top,0px); bottom:auto; height:var(--isense-visible-height);
+  top:var(--isense-keyboard-top,0px); bottom:auto; height:var(--isense-visible-height);
 }
 .native-sheet {
   max-height:min(calc(var(--isense-visible-height) - var(--isense-safe-area-top) - 8px),760px);
   padding-bottom:calc(18px + var(--isense-safe-area-bottom));
 }
 .help-backdrop {
-  top:var(--isense-visual-viewport-top,0px); bottom:auto; height:var(--isense-visible-height);
+  top:var(--isense-keyboard-top,0px); bottom:auto; height:var(--isense-visible-height);
   padding:max(12px,var(--isense-safe-area-top)) 12px calc(12px + var(--isense-safe-area-bottom));
 }
 .help-dialog { max-height:100%; }
@@ -359,9 +349,9 @@ html:is([data-keyboard-visible="true"],[style*="--isense-dev-keyboard-inset"]) .
 }
 
 /* Dedicated search owns its draft and its own scrollport; the map stays mounted
-   below it, while suggestions remain reachable as Safari resizes the viewport. */
+   hidden, while suggestions remain reachable as Safari resizes the viewport. */
 .location-search-backdrop {
-  position:fixed; z-index:1100; inset:var(--isense-visual-viewport-top,0px) 0 auto;
+  position:fixed; z-index:1100; inset:var(--isense-keyboard-top,0px) 0 auto;
   display:flex; width:100%; height:var(--isense-visible-height); overflow:hidden;
   padding:calc(12px + var(--isense-safe-area-top)) max(16px,var(--isense-safe-area-right))
     calc(10px + var(--isense-safe-area-bottom)) max(16px,var(--isense-safe-area-left));
@@ -442,42 +432,6 @@ html:is([data-keyboard-visible="true"],[style*="--isense-dev-keyboard-inset"]) .
 }
 @media (prefers-reduced-motion:reduce) {
   .location-search-screen,.location-suggestion { scroll-behavior:auto; transition:none; }
-}
-
-/* Short landscape viewports use a separate planner column. The primary
-   action must not begin below the shared navigation's visible boundary. */
-@media (max-height:500px) and (orientation:landscape) {
-  html:not([data-keyboard-visible="true"]) .map-screen:not([hidden]) {
-    display:grid; grid-template-columns:minmax(0,1fr) minmax(300px,1fr);
-    grid-template-rows:44px 44px auto minmax(0,1fr);
-    gap:5px 12px; overflow:hidden;
-  }
-  html:not([data-keyboard-visible="true"]) .map-screen .screen-heading {
-    grid-column:1; grid-row:1; margin:0; min-width:0;
-  }
-  html:not([data-keyboard-visible="true"]) .map-screen .screen-heading h1 { font-size:21px; }
-  html:not([data-keyboard-visible="true"]) .map-screen .environment-context {
-    grid-column:1; grid-row:2; width:100%; margin:0; min-width:0;
-  }
-  html:not([data-keyboard-visible="true"]) .map-screen .demo-disclosure {
-    grid-column:1; grid-row:3; margin:0;
-  }
-  html:not([data-keyboard-visible="true"]) .map-screen .map-workspace { display:contents; }
-  html:not([data-keyboard-visible="true"]) .map-screen .map-card {
-    grid-column:1; grid-row:4; position:relative; inset:auto;
-    min-height:0; max-height:100%; overflow:auto;
-  }
-  html:not([data-keyboard-visible="true"]) .map-screen .map-frame { min-height:0; }
-  html:not([data-keyboard-visible="true"]) .map-screen .map-workspace .location-card {
-    grid-column:2; grid-row:1 / span 4; position:relative; inset:auto;
-    display:flex; flex-direction:column; min-height:0; height:100%;
-    max-height:100%; margin:0; overflow:hidden;
-  }
-  html:not([data-keyboard-visible="true"]) .map-screen .location-controls {
-    flex:1 1 auto; min-height:0; overflow:auto; overscroll-behavior:contain;
-  }
-  html:not([data-keyboard-visible="true"]) .map-screen .route-fetch-button { flex:none; margin-top:6px; }
-  html:not([data-keyboard-visible="true"]) .map-screen .trip-message { flex:none; max-height:3.2em; overflow:auto; }
 }
 
 /* Essential text follows the browser's chosen root font size. Enlarged
@@ -582,12 +536,6 @@ html:is([data-keyboard-visible="true"],[style*="--isense-dev-keyboard-inset"]) .
 }
 @container (max-width:20rem) {
   .native-preference-actions { position:static; }
-}
-@media (max-height:500px) and (orientation:landscape) {
-  html:not([data-keyboard-visible="true"]) .map-screen .map-workspace > .environment-context {
-    position:relative; inset:auto; grid-column:1; grid-row:2;
-    width:100%; max-width:100%; min-width:0;
-  }
 }
 @media (max-width:370px) {
   .reports-screen .native-screen-heading h1 { font-size:1.26rem; }

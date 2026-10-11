@@ -1,6 +1,8 @@
 import { useMemo, useState } from 'react';
 import { ArrowRight, Check, Clock3, Info, MapPin, Navigation, Sparkles } from 'lucide-react';
 import { DetailsSheet } from '@/components/details-sheet';
+import { ResearchPredictionTools } from '@/components/research-prediction-tools';
+import { AutomaticSunlightDetails } from '@/components/automatic-sunlight-details';
 import { ObservationEvidence } from '@/components/observation-evidence';
 import { RouteTradeoffs } from '@/components/route-tradeoffs';
 import { RouteSunTransitionNotice } from '@/components/route-sun-transition-notice';
@@ -10,6 +12,7 @@ import { buildGoogleMapsURL } from '@/lib/google-maps-url';
 import { effectivePreferenceWeights, outsideSensoryRoutes, type DemoRoute, type PreferenceWeights, type ScoredRoute } from '@/lib/route-scoring';
 import { rankingMetricEvidence, routeIsProvisional } from '@/lib/ranking-evidence';
 import { auditRouteRanking } from '@/lib/route-ranking-audit';
+import { modelAwareSunContext } from '@/lib/solar-ranking';
 import type { SunContext } from '@/lib/sun-context';
 import { WALKING_WARNING } from '@workspace/campus-routing/routing';
 
@@ -20,10 +23,11 @@ const metricLabels = {
   walkingTime: 'Walking time',
 } as const;
 
-export function RoutesScreen({active,hasSearched,routes,ranked,preferences,sunContext,originName,destinationName,validation,onSelect,selectedId,onGoMap,onChangePreferences}:{
+export function RoutesScreen({active,hasSearched,routes,ranked,preferences,sunContext,originName,destinationName,validation,onSelect,selectedId,onGoMap,onChangePreferences,sunlightMessage,sunlightPending}:{
   active:boolean; hasSearched:boolean; routes:DemoRoute[]; ranked:ScoredRoute[]; preferences:PreferenceWeights;
   originName:string; destinationName:string; validation:string|null; onSelect:(id:string)=>void; selectedId:string|null;
   onGoMap:()=>void; onChangePreferences:()=>void; sunContext?:SunContext;
+  sunlightMessage?:string; sunlightPending?:boolean;
 }) {
   const [detailId,setDetailId]=useState<string|null>(null);
   const recommended=ranked[0];
@@ -37,11 +41,11 @@ export function RoutesScreen({active,hasSearched,routes,ranked,preferences,sunCo
   const auditRows=useMemo(()=>auditRouteRanking(routes,preferences,sunContext),[routes,preferences,sunContext]);
   const detailAudit=auditRows.find(row=>row.id===detailId);
   const strongest=useMemo(()=>{
-    const effective=effectivePreferenceWeights(preferences,sunContext);
+    const effective=effectivePreferenceWeights(preferences,modelAwareSunContext(routes,sunContext));
     return [{label:'noise',value:effective.avoidNoise},{label:'crowds',value:effective.avoidCrowds},
       {label:'shade',value:effective.preferShade},{label:'a shorter walk',value:effective.prioritizeShortWalkingTime}]
       .reduce((best,current)=>current.value>best.value?current:best);
-  },[preferences,sunContext]);
+  },[preferences,sunContext,routes]);
   const provisional=Boolean(recommended&&(routeIsProvisional(recommended)||recommended.acceptanceStatus==='unknown'));
   const summary=recommended?(provisional
     ?'Provisional match · some route conditions are estimated, demo, or unknown; this is not proof of quiet or comfort.'
@@ -59,6 +63,11 @@ export function RoutesScreen({active,hasSearched,routes,ranked,preferences,sunCo
       {hasSearched&&routes.length>0&&<p className="native-route-trip">{originName} <span aria-hidden="true">→</span> {destinationName}</p>}
       {hasSearched&&routes.length>0&&<p className="native-route-disclaimer" data-testid="routes-data-status">
         Estimates may be incomplete, historical or DEMO DATA. Open a route for provenance and coverage.
+      </p>}
+      {hasSearched&&routes.some(route=>route.source==='google')&&<p className="native-route-disclaimer"
+        role="status" aria-busy={sunlightPending} data-testid="automatic-sunlight-status">
+        {sunlightMessage} Historical terrain · experimental, not live conditions.
+        {sunContext?.phase==='nighttime'&&' Overnight direct sun is normally zero; night is not tree shade.'}
       </p>}
       {!hasSearched||!routes.length?<div className="native-route-empty" data-testid="status-no-routes">
         <span className="native-empty-symbol"><MapPin size={20}/></span>
@@ -152,6 +161,7 @@ export function RoutesScreen({active,hasSearched,routes,ranked,preferences,sunCo
               const evidence=item.metric==='walkingTime'?null:rankingMetricEvidence(detailRoute,item.metric);
               const displayed=evidence?.status==='excluded'?'Excluded at nighttime'
                 :evidence?.displayValue===null?'Unknown'
+                  :evidence?.status==='modeled'?`${evidence.displayValue.toFixed(1)}% potential direct sun · historical model`
                   :evidence?`${evidence.displayValue.toFixed(0)} / 100 · ${evidence.status}`
                     :`${item.rankingValue.toFixed(0)} / 100 estimated time cost`;
               return <div key={item.metric}>
@@ -174,7 +184,9 @@ export function RoutesScreen({active,hasSearched,routes,ranked,preferences,sunCo
         </p>}
         <SensoryLevelGuide/>
         <RouteTradeoffs route={detailRoute} alternatives={routes} preferences={preferences} sunContext={sunContext}/>
+        <AutomaticSunlightDetails route={detailRoute}/>
         <ObservationEvidence route={detailRoute}/>
+        <ResearchPredictionTools route={detailRoute} sunContext={sunContext}/>
         <RouteSunTransitionNotice route={detailRoute} sunContext={sunContext}/>
         <details className="route-research-details" open={false}>
           <summary>Candidate waypoints ({detailRoute.candidateWaypoints.length}) · not every turn</summary>

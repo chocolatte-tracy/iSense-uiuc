@@ -57,6 +57,83 @@ const withQueryKey = <T extends object, K>(query: T, queryKey: K): T & { queryKe
   return result;
 };
 
+export const getGetSunlightModelGridUrl = (digest: '109eca2ad7406836a932d1d50297488ae60491a69efa4e099c08d6f4fd38b902',) => {
+
+
+
+
+  return `/api/sunlight-model/grid/${digest}`
+}
+
+/**
+ * @summary Reviewed immutable historical UIUC terrain cache for client-side prediction
+ */
+export const getSunlightModelGrid = async (digest: '109eca2ad7406836a932d1d50297488ae60491a69efa4e099c08d6f4fd38b902', options?: Parameters<typeof customFetch>[1]): Promise<Blob> => {
+
+  return customFetch<Blob>(getGetSunlightModelGridUrl(digest),
+  {
+    ...options,
+    method: 'GET'
+
+
+  }
+);}
+
+
+
+
+
+export const getGetSunlightModelGridQueryKey = (digest: '109eca2ad7406836a932d1d50297488ae60491a69efa4e099c08d6f4fd38b902',) => {
+    return [
+    `/api/sunlight-model/grid/${digest}`
+    ] as const;
+    }
+
+
+export const getGetSunlightModelGridQueryOptions = <TData = Awaited<ReturnType<typeof getSunlightModelGrid>>, TError = ErrorType<void>>(digest: '109eca2ad7406836a932d1d50297488ae60491a69efa4e099c08d6f4fd38b902', options?: { query?:UseQueryOptions<Awaited<ReturnType<typeof getSunlightModelGrid>>, TError, TData>, request?: SecondParameter<typeof customFetch>}
+) => {
+
+const {query: queryOptions, request: requestOptions} = options ?? {};
+
+  const queryKey =  queryOptions?.queryKey ?? getGetSunlightModelGridQueryKey(digest);
+
+
+
+    const queryFn: QueryFunction<Awaited<ReturnType<typeof getSunlightModelGrid>>> = ({ signal }) => getSunlightModelGrid(digest, { signal, ...requestOptions });
+
+
+
+
+
+   return  { queryKey, queryFn, enabled: digest !== null && digest !== undefined, ...queryOptions} as UseQueryOptions<Awaited<ReturnType<typeof getSunlightModelGrid>>, TError, TData> & { queryKey: QueryKey }
+}
+
+export type GetSunlightModelGridQueryResult = NonNullable<Awaited<ReturnType<typeof getSunlightModelGrid>>>
+export type GetSunlightModelGridQueryError = ErrorType<void>
+
+
+/**
+ * @summary Reviewed immutable historical UIUC terrain cache for client-side prediction
+ */
+
+export function useGetSunlightModelGrid<TData = Awaited<ReturnType<typeof getSunlightModelGrid>>, TError = ErrorType<void>>(
+ digest: '109eca2ad7406836a932d1d50297488ae60491a69efa4e099c08d6f4fd38b902', options?: { query?:UseQueryOptions<Awaited<ReturnType<typeof getSunlightModelGrid>>, TError, TData>, request?: SecondParameter<typeof customFetch>}
+
+ ):  UseQueryResult<TData, TError> & { queryKey: QueryKey } {
+
+  const queryOptions = getGetSunlightModelGridQueryOptions(digest,options)
+
+  const query = useQuery(queryOptions) as  UseQueryResult<TData, TError> & { queryKey: QueryKey };
+
+  return withQueryKey(query, queryOptions.queryKey);
+}
+
+
+
+
+
+
+
 export const getListCommunityReportsUrl = () => {
 
 

@@ -1,0 +1,6 @@
+{
+  "url": "https://data.isgs.illinois.edu/arcgis/rest/services/Elevation/IL_Champaign_DTM_2020/ImageServer/exportImage?f=json&bbox=394812%2C4439966%2C396012%2C4441166&bboxSR=32616&imageSR=32616&size=600%2C600&format=tiff&pixelType=F32&interpolation=RSP_NearestNeighbor&noData=-9999&renderingRule=%7B%22rasterFunction%22%3A+%22None%22%7D",
+  "retrievedAt": "2026-10-11T06:25:56.280833+00:00",
+  "sha256": "07984cecf5920c5eda198c8d98a0864f2d5756b12d36e1a93918ac35c7ae4c75",
+  "bytes": 325
+}

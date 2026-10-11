@@ -7,6 +7,7 @@ import { ReportsScreen } from '@/components/reports-screen';
 import { MobileNavigation } from '@/components/mobile-navigation';
 import { InstallISense } from '@/components/install-isense';
 import { ObservationImport } from '@/components/observation-import';
+import { LayoutDiagnostics } from '@/components/layout-diagnostics';
 import { useTripPlanner } from '@/hooks/use-trip-planner';
 import { useAppNavigation } from '@/hooks/use-app-navigation';
 import { useSavedPreferences } from '@/hooks/use-saved-preferences';
@@ -19,6 +20,7 @@ import { applySunContext, rankRoutes } from '@/lib/route-scoring';
 import { UIUC_SUN_LOCATION } from '@/lib/sun-context';
 import { installationEnvironment } from '@/lib/pwa-environment';
 import { useCommunityReports } from '@/hooks/use-community-reports';
+import { useAutomaticSunlight } from '@/hooks/use-automatic-sunlight';
 
 function App() {
   useVisualViewport();
@@ -50,7 +52,8 @@ function App() {
   const solarPoint=origin.place?.coordinates??availableRoutes[0]?.coordinates[0];
   const {context:sunContext,simulated}=useSunContext(solarPoint
     ?{latitude:solarPoint[0],longitude:solarPoint[1]}:UIUC_SUN_LOCATION);
-  const contextualRoutes=useMemo(()=>availableRoutes.map(route=>applySunContext(route,sunContext)),[availableRoutes,sunContext]);
+  const sunlight=useAutomaticSunlight(availableRoutes,sunContext.departureTime);
+  const contextualRoutes=useMemo(()=>sunlight.routes.map(route=>applySunContext(route,sunContext)),[sunlight.routes,sunContext]);
 
   useEffect(()=>{
     if(!import.meta.env.DEV)return;
@@ -102,7 +105,7 @@ function App() {
     window.addEventListener('appinstalled',installed);
     return()=>{media.removeEventListener?.('change',sync);window.removeEventListener('appinstalled',installed);};
   },[]);
-  const rankedRoutes=useMemo(()=>rankRoutes(availableRoutes,preferences,sunContext),[availableRoutes,preferences,sunContext]);
+  const rankedRoutes=useMemo(()=>rankRoutes(sunlight.routes,preferences,sunContext),[sunlight.routes,preferences,sunContext]);
   const fastest=availableRoutes.length?Math.min(...availableRoutes.map(route=>route.walkingTimeMinutes)):0;
   const selected=rankedRoutes.find(route=>route.id===selectedRouteId)??contextualRoutes.find(route=>route.id===selectedRouteId
     &&route.walkingTimeMinutes-fastest<=preferences.maxExtraWalkingMinutes)??rankedRoutes[0];
@@ -134,13 +137,14 @@ function App() {
         useMyLocation={useMyLocation} locating={locating} locationMessage={locationMessage} validation={validation}
         loadingRoutes={loadingRoutes} routeStatus={routeStatus} onFindRoutes={()=>void findRoutes()}
         onSearchModeChange={setLocationSearchMode} onHelp={()=>setHelpOpen(true)}
-        sunContext={sunContext} simulated={simulated} reports={communityReports.reports} reportPicking={reportPicking}
+        reports={communityReports.reports} reportPicking={reportPicking}
         onReportPointSelected={(point:[number,number])=>{setPendingReportPoint(point);setReportPicking(false);setReportFormReopenKey(value=>value+1);navigate('reports');}}
         onCancelReportPick={()=>{setReportPicking(false);setReportFormReopenKey(value=>value+1);navigate('reports');}}/>
       <PreferencesScreen active={screen==='preferences'} preferences={preferences} setPreferences={setPreferences}
         lockedWeights={lockedWeights} setLockedWeights={setLockedWeights} onApply={applyPreferences}
         onViewRoutes={()=>navigate('routes')}/>
       <RoutesScreen active={screen==='routes'} hasSearched={hasSearched} routes={contextualRoutes}
+        sunlightMessage={sunlight.message} sunlightPending={sunlight.pending}
         ranked={rankedRoutes} preferences={preferences} sunContext={sunContext} originName={origin.place?.name??origin.text}
         destinationName={destination.place?.name??destination.text} validation={validation}
         selectedId={selectedRouteId} onSelect={setSelectedRouteId} onGoMap={()=>navigate('map')}
@@ -169,6 +173,7 @@ function App() {
           <p className="route-request-note">{WALKING_WARNING}</p>
           <p className="route-request-note">Unknown endpoints are not guessed. Device-reported positions are used only in this tab and sent for routing only after you explicitly search.</p>
         </details>
+        <LayoutDiagnostics/>
         <details><summary>Research and imported observations</summary>
           <p>Observation values are research estimates and may include demonstration data. Review source notes and candidate limitations before relying on a route.</p>
           <ObservationImport data={observations} routes={availableRoutes} onChange={setObservations}/>

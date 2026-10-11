@@ -1,0 +1,5 @@
+[
+  {"id":"quad-west-diagnostic","source":"diagnostic_transect","geometryStatus":"diagnostic_only","crs":"EPSG:4326","coordinateOrder":"longitude,latitude","durationMinutes":5,"geometry":{"type":"LineString","coordinates":[[-88.2284,40.1107],[-88.2284,40.1078]]}},
+  {"id":"quad-center-diagnostic","source":"diagnostic_transect","geometryStatus":"diagnostic_only","crs":"EPSG:4326","coordinateOrder":"longitude,latitude","durationMinutes":5,"geometry":{"type":"LineString","coordinates":[[-88.2272,40.1107],[-88.2272,40.1078]]}},
+  {"id":"quad-east-diagnostic","source":"diagnostic_transect","geometryStatus":"diagnostic_only","crs":"EPSG:4326","coordinateOrder":"longitude,latitude","durationMinutes":5,"geometry":{"type":"LineString","coordinates":[[-88.2260,40.1107],[-88.2260,40.1078]]}}
+]

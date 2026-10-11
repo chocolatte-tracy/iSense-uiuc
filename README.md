@@ -78,7 +78,7 @@ For example, **Noise importance 40% + acceptance Low** means noise strongly affe
 
 ### Walking-time constraint
 
-- Maximum extra walking time is a separate 0–10 minute limit.
+- Maximum extra walking time is a separate user-entered, nonnegative whole-minute limit (not restricted to 0–10).
 - Default: 5 extra minutes.
 - It is measured relative to the fastest available route.
 - It is not included in the 100% importance total.
@@ -93,6 +93,11 @@ The app highlights a recommendation, updates its explanation, and retains select
 Reset restores the default importance shares, Medium acceptance levels, and 5-minute extra-walking limit. Preferences and locks are saved only in localStorage and restored on refresh/reopen; trip coordinates, imported observations and route responses are not persisted.
 
 ## 3. Current recommendation algorithm
+
+For the current automatic historical-terrain sunlight integration and its experimental eligibility rules,
+see [Automatic sunlight](docs/AUTOMATIC-SUNLIGHT.md).
+For the complete Chinese feature and limitation summary, see
+[功能与限制](docs/FEATURES-AND-LIMITATIONS.zh-CN.md).
 
 For the currently available routes:
 
@@ -400,3 +405,17 @@ See [development simulation, tests and calculation limitations](artifacts/quiet-
 Development-only `?preview=demo&solarTime=2026-10-10T17%3A00%3A00Z` simulates
 daytime; change the instant to `2026-10-10T05%3A00%3A00Z` for nighttime.
 The demo suppresses Google services; production ignores the solar-time override.
+
+## Offline sunlight research integration (v2.3)
+
+Google candidate route details now offer **Offline sunlight research**: export the
+complete returned path, exact walking duration and departure snapshot; run the local
+Python model; then import its JSON to display sunlight, coverage and limitations.
+These historical-terrain predictions are **not live observations** and are never
+used for route ranking (`rankingEligible=false`). No new online API is involved.
+
+See [research/README.md](research/README.md) for commands, provenance and missing-data
+rules, and [research/REPLIT-VALIDATION.md](research/REPLIT-VALIDATION.md) for this
+workspace's verification results. The supplied v2.3 archive is based on GitHub
+commit `2aa91962a2ce31816da195eb229bfe7a85a604ab`; it was selectively integrated,
+not used to replace the current app.

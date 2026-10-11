@@ -63,6 +63,20 @@ export function GoogleCampusMap({ browserApiKey, setupMessage, routes, recommend
     return () => { cancelled = true; unsubscribe(); markers.forEach((marker) => marker.setMap(null)); endpointMarkers.current = []; map.current = null; };
   }, [browserApiKey]);
   useEffect(() => {
+    if (!ready || !node.current || !map.current) return;
+    const canvas = node.current;
+    let frame = 0;
+    const observer = new ResizeObserver(entries => {
+      if (!entries.some(entry => entry.contentRect.width > 0 && entry.contentRect.height > 0)) return;
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
+        if (map.current) google.maps.event.trigger(map.current, 'resize');
+      });
+    });
+    observer.observe(canvas);
+    return () => { observer.disconnect(); cancelAnimationFrame(frame); };
+  }, [ready]);
+  useEffect(() => {
     if (!ready || !map.current) return;
     const bounds = new google.maps.LatLngBounds();
     const firstLiveRoute = routes.find(route => route.source === 'google');

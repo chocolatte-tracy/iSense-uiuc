@@ -1,0 +1,6 @@
+.native-route-detail-body .research-prediction-tools { font-size:13px; line-height:1.5; padding:8px 12px 12px; overflow-wrap:anywhere; }
+.native-route-detail-body .research-prediction-tools p { font-size:13px; margin:8px 0; }
+.research-prediction-tools h3 { font-size:14px; line-height:1.4; margin:14px 0 6px; }
+.research-prediction-tools input[type="file"] { display:block; max-width:100%; margin-top:6px; font-size:12px; }
+.research-prediction-tools button { max-width:100%; white-space:normal; }
+.research-prediction-tools summary:focus-visible { outline:2px solid #355f78; outline-offset:3px; }

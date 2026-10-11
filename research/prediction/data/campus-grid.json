@@ -1,0 +1,28 @@
+{
+  "crs": "EPSG:32616",
+  "extent": {
+    "xmin": 394812,
+    "ymin": 4439966,
+    "xmax": 396012,
+    "ymax": 4441166,
+    "spatialReference": {
+      "wkid": 32616,
+      "latestWkid": 32616
+    }
+  },
+  "width": 600,
+  "height": 600,
+  "verticalUnit": "m",
+  "sourceVerticalUnit": "US survey foot",
+  "collectionStart": "2019-11-23",
+  "collectionEnd": "2020-03-08",
+  "sourceUrl": "https://data.isgs.illinois.edu/arcgis/rest/services/Elevation/IL_Champaign_DSM_2020/ImageServer",
+  "resampling": "nearest",
+  "gridSha256": "109eca2ad7406836a932d1d50297488ae60491a69efa4e099c08d6f4fd38b902",
+  "limitations": [
+    "winter_acquisition_canopy_not_summer_leaf_on",
+    "historical_surface",
+    "2m_resampling_can_miss_small_obstacles",
+    "not_field_validated"
+  ]
+}

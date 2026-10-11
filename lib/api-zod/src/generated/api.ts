@@ -9,6 +9,16 @@ import * as zod from 'zod';
 
 
 /**
+ * @summary Reviewed immutable historical UIUC terrain cache for client-side prediction
+ */
+export const GetSunlightModelGridParams = zod.object({
+  "digest": zod.enum(['109eca2ad7406836a932d1d50297488ae60491a69efa4e099c08d6f4fd38b902'])
+})
+
+export const GetSunlightModelGridResponse = zod.unknown()
+
+
+/**
  * @summary Recent unverified community observations, independent of route scoring
  */
 export const listCommunityReportsResponseReportsItemOneLocationNameMax = 80;

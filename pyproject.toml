@@ -4,5 +4,9 @@ version = "0.1.0"
 description = "Add your description here"
 requires-python = ">=3.13"
 dependencies = [
+    "numpy==2.2.6",
     "pillow>=12.3.0",
+    "pyproj==3.7.2",
+    "scikit-learn==1.6.1",
+    "tifffile==2024.8.30",
 ]

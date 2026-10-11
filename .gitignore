@@ -1,3 +1,6 @@
+# Public snapshot: keep local agent state and uploads out of GitHub.
+/.agents/
+/attached_assets/
 # See https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
 # compiled output
@@ -48,3 +51,15 @@ Thumbs.db
 # Replit
 .cache/
 .local/
+
+# Offline research: private route exports and large, locally supplied terrain caches.
+research/prediction/results/*
+research/prediction/data/*.npz
+research/prediction/data/*.tif
+research/prediction/data/melbourne-*
+research/prediction/data/crowd-*
+research/prediction/data/sensors.*
+__pycache__/
+*.pyc
+.venv/
+/attached_assets/isense-uiuc-v2.3_1791703811550.zip

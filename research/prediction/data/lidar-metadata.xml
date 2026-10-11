@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE metadata SYSTEM "http://thor-f5.er.usgs.gov/ngtoc/metadata/fgdc-std-001-1998.dtd">
+<metadata>
+  <idinfo>
+    <!-- Identification Information - basic information about the data set. Type: compound. -->
+    <citation>
+      <!-- Citation - information to be used to reference the data set. Type: compound. -->
+      <citeinfo>
+        <!-- Citation Information - the recommended reference to be used for the data set. -->
+        <origin>Aerial Services, Inc.</origin>
+        <!-- Originator - the name of an organization or individual that developed the data set. Type: text. Domain: "Unknown" free text. -->
+        <pubdate>20200924</pubdate>
+        <!-- Publication Date - the date when the data set is published or otherwise made available for release. Type: date. Domain: "Unknown" "Unpublished material" free date-->
+        <title>Block B Champaign County, Illinois Lidar; Classified Point Cloud</title>
+        <!-- Title - the name by which the data set is known. Type: text. Domain: free text. -->
+        <geoform>Lidar point cloud</geoform>
+        <!-- Geospatial Data Presentation Form. Type: text. Domain: "Lidar point cloud" free text. -->
+      </citeinfo>
+    </citation>
+    <descript>
+      <!-- Description - a characterization of the data set, including its intended use and limitations. Type: compound. -->
+      <abstract>Product: These lidar data are processed Classified LAS 1.4 files, formatted to 7509 individual 2000 US survey feet x 2000 US survey feet tiles; used to create intensity images, 3D breaklines and hydro-flattened DEMs as necessary.  Geographic Extent: Champaign County Illinois, covering approximately 1049 square miles.  Dataset Description: Champaign County Illinois 2019 Lidar project Description: Block B Champaign County, Illinois 2019 Lidar project called for the planning, acquisition, processing and derivative products of lidar data to be collected at a nominal pulse spacing of 0.5 meter.  Project specifications are based on the U.S. Geological Survey National Geospatial Program Base Lidar Specification, Version 1.3.  The data was developed based on a horizontal projection/datum of NAD83(2011), State Plane Coordinat System Illinois East (FIPS 1201), United States Survey Feet, and a vertical datum of NAVD88 (GEOID12B), US survey feet.  Lidar data was delivered as processed Classified LAS 1.4 files, formatted to 7509 individual 2000 US survey feet x 2000 US survey feet tiles, as was tiled Intensity Imagery, and tiled bare earth DEMs; all tiled to the same 2000 US survey feet x 2000 US survey feet schema. Project called for the planning, acquisition, processing and derivative products of lidar data to be collected at a nominal pulse spacing (NPS) of 0.5 meters. Project specifications are based on the U.S. Geological Survey National Geospatial Program Base Lidar Specification, Version 1.3; Quality Level 2+. The data was developed based on a horizontal projection/datum of NAD83(2011), State Plane Coordinat System Illinois East (FIPS 1201), US survey feet, and a vertical datum of NAVD88 (GEOID12B), US survey feet. Lidar data was delivered as processed Classified LAS 1.4 files, formatted to 7509 individual 2000 US survey feet x 2000 US survey feet tiles, as tiled Intensity Imagery, and as tiled bare earth DEMs; all tiled to the same 2000 x 2000 US survey feet schema. 
+	 Ground Conditions:  Lidar was collected in late 2019 and early 2020, while no snow was on the ground and rivers were at or below normal levels.  In order to post process the lidar data to meet task order specifications and meet ASPRS vertical accuracy guidelines, Subcontractor, Surveying and Mapping, LLC (SAM) established a total of 34 ground control points that were used to calibrate the lidar to known ground locations established throughout the Champaign County, Illinois project area.  An additional 112 independent accuracy checkpoints, 64 in Bare Earth and Uraban landcovers (64 NVA points), 48 in tall Grass/tall weeds/crops, Brush lands/short trees, Forested categories (48 VVA points), were used to assess the vertical accuracy of the data.  These checkpoints were not used to calibrate or post process the data.</abstract>
+      <!-- Abstract - a brief narrative descriptive summary of the data set. Type: text. Domain: free text. -->
+      <purpose>To acquire QL2+ lidar detailing surface elevation data, vegetation, and buildings for use in conservation planning design, research, floodplain mapping, dam safety assessment and elevation modeling, ect.  Classified LAS files are used to show the manually reviewed bare earth surface. This allows the user to create Intensity Images, Breaklines and Raster DEMs. The purpose of this lidar data was to produce high accuracy 3D hydro-flattened Digital Elevation Model (DEM) with a 2 US survey feet cell size. These lidar point cloud data were used to create intensity images, 3D breaklines, and hydro-flattened DEMs as necessary.</purpose>
+      <!-- Purpose - a summary of the intentions with which the data set was developed. Type: text. Domain: free text. -->
+      <supplinf>USGS Contract No. G17PC00007 CONTRACTOR: Aerial Services, Inc. Lidar data were acquired and calibrated by the prime contractor.  PRIME: Aerial Services, Inc.  All follow-on processing was completed by the prime contractor.
+       <!-- Supplemental Information - other descriptive information about the data set. Type: text. Domain: free text. -->
+      </supplinf>
+      <lidar>
+        <!-- For Classified Point Cloud and Swath metadata files -->
+        <ldrinfo>
+          <!-- Lidar Information - contains metadata about the sensor and collection conditions. -->
+          <ldrspec>U.S. Geological Survey (USGS) - National Geospatial Program (NGP) Lidar Base Specification v1.3</ldrspec>
+          <!-- Lidar Base Specification applicable to the point cloud. -->
+          <ldrsens>Leica ALS70-HP</ldrsens>
+          <!-- Lidar Sensor make and model. -->
+          <ldrmaxnr>4</ldrmaxnr>
+          <!-- Lidar Maximum Number of Returns per pulse. -->
+          <ldrnps>0.5</ldrnps>
+          <!-- Lidar Nominal Pulse Spacing, in meters. -->
+          <ldrdens>4</ldrdens>
+          <!-- Lidar Nominal Pulse Density, in points per square meter. -->
+          <ldranps>0.5</ldranps>
+          <!-- Lidar Aggregate Nominal Pulse Spacing, in meters. -->
+          <ldradens>4</ldradens>
+          <!-- Lidar Aggregate Nominal Pulse Density, in points per square meter. -->
+          <ldrfltht>1300</ldrfltht>
+          <!-- Lidar Flight Height for the collection, in meters. -->
+          <ldrfltsp>125</ldrfltsp>
+          <!-- Lidar Nominal Flight Speed for the collection, in knots. -->
+          <ldrscana>50</ldrscana>
+          <!-- Lidar Sensor Scan Angle, total, in degrees. -->
+          <ldrscanr>47</ldrscanr>
+          <!-- Lidar Scan Frequency of the scanner, in hertz. -->
+          <ldrpulsr>394</ldrpulsr>
+          <!-- Lidar Pulse Rate of the scanner, in kilohertz. -->
+          <ldrpulsd>4</ldrpulsd>
+          <!-- Lidar Pulse Duration of the scanner, in nanoseconds. -->
+          <ldrpulsw>0.76</ldrpulsw>
+          <!-- Lidar Pulse Width of the scanner, in meters. -->
+          <ldrwavel>1064</ldrwavel>
+          <!-- Lidar Central Wavelength of the sensor laser, in nanometers. -->
+          <ldrmpia>1</ldrmpia>
+          <!-- Lidar Multiple Pulses In Air, 0 = No; 1 = Yes -->
+          <ldrbmdiv>0.28</ldrbmdiv>
+          <!-- Lidar Beam Divergence, in Milliradians. -->
+          <ldrswatw>1212</ldrswatw>
+          <!-- Lidar Swath Width on the ground, in meters. -->
+          <ldrswato>30</ldrswato>
+          <!-- Lidar Nominal Swath Overlap, as a percentage. -->
+          <ldrgeoid>National Geodetic Survey (NGS) Geoid12B</ldrgeoid>
+          <!-- Geoid used for vertical reference. -->
+        </ldrinfo>
+        <ldraccur><!-- Lidar Accuracy. Non-vegetated vertical accuracy values for the swath. ALL VALUES ARE REPORTED IN METERS. -->
+          <ldrchacc>0.208</ldrchacc>
+          <!-- Lidar Calculated Horizontal Accuracy of the point cloud data. -->
+          <rawnva>0.086</rawnva>
+          <!-- Raw Nonvegetated Vertical Accuracy of the raw point cloud data. If testing not completed, leave value as zero "0" -->
+          <rawnvan>64</rawnvan>
+          <!-- Raw Nonvegetated Vertical Accuracy Number of checkpoints used to calculate the reported nonvegetated vertical accuracy of the raw point cloud data. If testing not completed, leave value as zero "0" -->
+      </ldraccur>
+        <lasinfo>
+          <!-- LAS Information. Type: compound. -->
+          <lasver>1.4</lasver>
+          <!-- LAS Version -->
+          <lasprf>6</lasprf>
+          <!-- LAS Point Record Format. -->
+          <laswheld>Withheld (ignore) points were identified in these files using the standard LAS witheld bit.</laswheld>
+          <!-- Describe how withheld points are identified. -->
+          <lasolap>Swath "overage" points were identified in these files using the standard LAS overlap bit</lasolap>
+          <!-- Describe how overage points are identified. -->
+          <lasintr>16</lasintr>
+          <!-- Specify the native radiometric resolution of intensity values, in Bits. -->
+          <lasclass>
+            <!-- LAS Classification. Type: compound. -->
+            <clascode>1</clascode>
+            <!-- Classification Code -->
+            <clasitem>Processed, but Unclassified</clasitem>
+            <!-- Classification Item -->
+          </lasclass>
+          <lasclass>
+            <!-- LAS Classification. Type: compound. -->
+            <clascode>2</clascode>
+            <!-- Classification Code -->
+            <clasitem>Bare Earth Ground</clasitem>
+            <!-- Classification Item -->
+          </lasclass>
+          <lasclass>
+            <!-- LAS Classification. Type: compound. -->
+            <clascode>3</clascode>
+            <!-- Classification Code -->
+            <clasitem>Low Vegetation</clasitem>
+            <!-- Classification Item -->
+          </lasclass>
+          <lasclass>
+            <!-- LAS Classification. Type: compound. -->
+            <clascode>4</clascode>
+            <!-- Classification Code -->
+            <clasitem>Medium Vegetation</clasitem>
+            <!-- Classification Item -->
+          </lasclass>
+          <lasclass>
+            <!-- LAS Classification. Type: compound. -->
+            <clascode>5</clascode>
+            <!-- Classification Code -->
+            <clasitem>High Vegetation</clasitem>
+            <!-- Classification Item -->
+          </lasclass>
+          <lasclass>
+            <!-- LAS Classification. Type: compound. -->
+            <clascode>6</clascode>
+            <!-- Classification Code -->
+            <clasitem>Building</clasitem>
+            <!-- Classification Item -->
+          </lasclass>
+          <lasclass>
+            <!-- LAS Classification. Type: compound. -->
+            <clascode>7</clascode>
+            <!-- Classification Code -->
+            <clasitem>Low Noise</clasitem>
+            <!-- Classification Item -->
+          </lasclass>
+          <lasclass>
+            <!-- LAS Classification. Type: compound. -->
+            <clascode>9</clascode>
+            <!-- Classification Code -->
+            <clasitem>Water</clasitem>
+            <!-- Classification Item -->
+          </lasclass>
+          <lasclass>
+            <!-- LAS Classification. Type: compound. -->
+            <clascode>17</clascode>
+            <!-- Classification Code -->
+            <clasitem>Bridge Decks</clasitem>
+            <!-- Classification Item -->
+          </lasclass>
+          <lasclass>
+            <!-- LAS Classification. Type: compound. -->
+            <clascode>18</clascode>
+            <!-- Classification Code -->
+            <clasitem>High Noise</clasitem>
+            <!-- Classification Item -->
+          </lasclass>
+          <lasclass>
+            <!-- LAS Classification. Type: compound. -->
+            <clascode>20</clascode>
+            <!-- Classification Code -->
+            <clasitem>Ignored Ground</clasitem>
+            <!-- Classification Item -->
+          </lasclass>
+        </lasinfo>
+      </lidar>
+    </descript>
+    <timeperd>
+      <!-- Time Period of Content. Type: compound. -->
+      <timeinfo>
+        <!-- Time Period Information - information about the date and time of an event. Type: compound. -->
+            <rngdates>
+     <!-- Range of Dates/Times. Type: compound. -->
+     <begdate>20191123</begdate>
+     <!-- Beginning Date - the first year, month, and day of the collection. The field MUST be formatted YYYYMMDD. Type: date. Domain: "Unknown" free date. -->
+     <enddate>20200308</enddate>
+     <!-- Ending Date - the last year, month, and day for the collection. The field MUST be formatted YYYYMMDD. Type: date. Domain: "Unknown" free date. -->
+    </rngdates>
+      </timeinfo>
+      <current>ground condition</current>
+      <!-- Currentness Reference. Type: text. Domain: "ground condition" free text. -->
+    </timeperd>
+    <status>
+      <!-- Status - the state of the maintenance information for the data set. Type: compound. -->
+      <progress>Complete</progress>
+      <!-- Progress - the state of the data set. Type: text. Domain: "Complete" "In Work" "Planned" free text. -->
+      <update>None Planned</update>
+      <!-- Maintenance and Update Frequency - the frequency with which changes and additions are made to the data set after the initial data set is completed. Type: text. Domain: "Unknown" "As needed" "None planned" free text-->
+    </status>
+    <spdom>
+      <!-- Spatial Domain - the geographic areal domain of the data set. Type: compound. -->
+      <bounding>
+        <!-- Bounding Coordinates - the limits of coverage of a data set expressed by latitude and longitude values in the order western-most, eastern-most, northern-most, and southern-most. Type: compound. -->
+        <westbc>-88.48112</westbc>
+        <!-- West Bounding Coordinate - western-most coordinate of the limit of coverage expressed in longitude. Type: real. Domain: -180.0 <= West Bounding Coordinate < 180.0 -->
+        <eastbc>-87.91407</eastbc>
+        <!-- East Bounding Coordinate - eastern-most coordinate of the limit of coverage expressed in longitude. Type: real. Domain: -180.0 <= East Bounding Coordinate <= 180.0 -->
+        <northbc>44.41464</northbc>
+        <!-- North Bounding Coordinate - northern-most coordinate of the limit of coverage expressed in latitude. Type: real. Domain: -90.0 <= North Bounding Coordinate <= 90.0 -->
+        <southbc>39.86571</southbc>
+        <!-- South Bounding Coordinate - southern-most coordinate of the limit of coverage expressed in latitude. Type: real. Domain: -90.0 <= South Bounding Coordinate <= 90.0-->
+      </bounding>
+      <lboundng>
+      	<leftbc>1303000</leftbc>
+      	<!-- Left (western-most) Bounding Coordinate for coverage of the dataset expressed in the Coordinate Reference System in which the data are delivered. -->
+      	<rightbc>1361000</rightbc>
+      	<!-- Right (eastern-most) Bounding Coordinate for coverage of the dataset expressed in the Coordinate Reference System in which the data are delivered. -->
+      	<topbc>1029000</topbc>
+      	<!-- Top (northern-most) Bounding Coordinate for coverage of the dataset expressed in the Coordinate Reference System in which the data are delivered. -->
+      	<bottombc>965000</bottombc>
+      	<!-- Bottom (southern-most) Bounding Coordinate for coverage of the dataset expressed in the Coordinate Reference System in which the data are delivered. -->
+      </lboundng>
+    </spdom>
+    <keywords>
+      <!-- Keywords - words or phrases summarizing an aspect of the data set. Type: compound. -->
+      <theme>
+        <!-- Theme - subjects covered by the data set. Type: compound. -->
+        <themekt>None</themekt>
+        <!-- Theme Keyword Thesaurus. Type: text. Domain: "None" free text. -->
+        <themekey>Model</themekey>
+        <themekey>LAS Point Cloud</themekey>
+        <themekey>Remote Sensing</themekey>
+        <themekey>Elevation Data</themekey>
+        <themekey>Lidar</themekey>
+        <!-- Theme Keyword - common-use word or phrase used to describe the subject of the data set. Type: text. Domain: free text. -->
+      </theme>
+      <place>
+        <!-- Place - geographic locations characterized by the data set. Type: compound. -->
+        <placekt>None</placekt>
+        <!-- Place Keyword Thesaurus. Type: text. Domain: "None" free text. -->
+        <placekey>Illinois</placekey>
+        <placekey>Champaign County</placekey>
+        <!-- Place Keyword - the geographic name of a location(s) covered by a data set. Type: text Domain: free text. -->
+      </place>
+    </keywords>
+    <accconst>No restrictions apply to these data.</accconst>
+    <!-- Access Constraints - restrictions and legal prerequisites for accessing the data set. Type: text. Domain: "None" free text. -->
+    <useconst>None. However, users should be aware that temporal changes may have occurred since this dataset was collected and that some parts of these data may no longer represent actual surface conditions. Users should not use these data for critical applications without a full awareness of its limitations. Acknowledgement of the U.S. Geological Survey would be appreciated for products derived from these data.</useconst>
+    <!-- Use Constraints - restrictions and legal prerequisites for using the data set after access is granted. Type: text. Domain: "None" free text. -->
+    <native>Waypoint's Inertial Explorer version 8.60; Leica's CloudPro version 1.2.4 ; MicroSatation Connect version 10.02.00.39; TerraSolid TerraMatch version019.002,TerraModel version 019.002, TerraScan version 019.003; Windows 10 Operating \\server\directory path\*.las 623GB</native>
+      <!-- Native Data Set Environment - a description of the data set in the producer's processing environment, including items such as the name of the software (including version), the computer operating system, file name (including host-, path-, and filenames), and the data set size. Domain: free text -->
+  </idinfo>
+  <dataqual>
+    <!-- Data Quality Information. Type: compound. -->
+    <logic>Data covers the entire area specified for this project.</logic>
+    <!-- Logical Consistency Report - an explanation of the fidelity of relationships in the data set and tests used. Type: text. Domain: free text. -->
+    <complete>These LAS data files include all data points collected. No points have been removed or excluded. A visual qualitative assessment was performed to ensure data completeness. No void areas or missing data exist. The raw point cloud is of good quality and data passes Non-Vegetated Vertical Accuracy specifications.</complete>
+    <!-- Completeness Report - information about omissions, selection criteria, generalization, definitions used, and other rules used to derive the data set. Type: text. Domain: free text-->
+  <posacc>
+      <!-- Positional Accuracy - an assessment of the accuracy of the positions of spatial objects. Type: compound. -->
+      <vertacc>
+      <!-- Vertical Positional Accuracy - an estimate of accuracy of the vertical positions in the data set. Type: compound. -->
+      <vertaccr>This data set was produced to meet ASPRS Positional Accuracy Standard for Digital Geospatial Data (2014) for a 10-cm RMSEz Vertical Accuracy Class.</vertaccr>
+   <!-- Vertical Positional Accuracy Report - an explanation of the accuracy of the vertical coordinate measurements and a description of the tests used. Type: text. Domain: free text. -->
+   </vertacc>
+   </posacc>
+    <lineage>
+      <!-- Lineage - information about the events, parameters, and source data which constructed the data set, and information about the responsible parties. Type: compound. -->
+	  <procstep>
+        <!-- Process Step - information about a single processing step. Please provide information for each step of the data acquisition, calibration, processing, and analysis. Type: compound. -->
+        <procdesc>The boresight for each lift was done individually as the solution may change slightly from lift to lift. The following steps describe the Raw Data Processing and Boresight process: 1) Technicians processed the raw data to LAS format flight lines using the final GPS/IMU solution. This LAS data set was used as source data for boresight. 2) Technicians first used Aerial Services Inc. proprietary and commercial software to calculate initial boresight adjustment angles based on sample areas selected in the lift. These areas cover calibration flight lines collected in the lift, cross tie and production flight lines. These areas are well distributed in the lift coverage and cover multiple terrain types that are necessary for boresight angle calculation. The technician then analyzed the results and made any necessary additional adjustment until it is acceptable for the selected areas. 3) Once the boresight angle calculation was completed for the selected areas, the adjusted settings were applied to all of the flight lines of the lift and checked for consistency. The technicians utilized commercial and proprietary software packages to analyze how well flight line overlaps match for the entire lift and adjusted as necessary until the results met the project specifications. 4) Once all lifts were completed with individual boresight adjustment, the technicians checked and corrected the vertical misalignment of all flight lines and also the matching between data and ground truth. The relative accuracy was less than or equal to 6 cm RMSEz within individual swaths and less than or equal to 8 cm RMSEz or within swath overlap (between adjacent swaths). 5) The technicians ran a final vertical accuracy check of the boresighted flight lines against the surveyed check points after the z correction to ensure the requirement of NVA = 19.6 cm 95% Confidence Level (Required Accuracy) was met. Point classification was performed according to USGS Lidar Base Specification 1.4, and breaklines were collected for water features. Bare earth DEMs were exported from the classified point cloud using collected breaklines for hydroflattening.</procdesc>
+        <!-- Process Description - an explanation of the the processing step and parameters used. Include Flight, Imagery development, Analysis. Type: text. Domain: free text-->
+        <srcused>Champaign_co_lidar_gnd_ctrl</srcused>
+        <!-- Source Used Citation Abbreviation - the Source Citation Abbreviation of a data set used in the processing step. Domain: Source Citation Abbreviations from the Source Information entries for the data set. -->
+        <procdate>20200609</procdate>
+        <!-- Process Date - the date when the processing step was completed. The field MUST be formatted YYYYMMDD. Type: text. Domain: "Unknown" "Not complete" free date. -->
+      </procstep>
+      <procstep>
+        <!-- Process Step - information about a single processing step. Type: compound. -->
+        <procdesc>LAS Point Classification QL2+:  The point classification was performed as described below.  Classification Filters were applied to aid in the definition of; terrain characteristics, vegetation attribution of low, medium or high and building roof tops.  Filtering processes address aspects of the data such as: ground points, noise points, air points, low points, Low vegetation 0.5-5’, medium vegetation 5-20’, high vegetation >20’, manmade features, buildings, and overlap points.  The Classified point cloud data was manually reviewed to ensure correct classification of; ground (ASPRS class 2), and building roof tops (ASPRS class 6).  After the bare earth surface was finalized, it was then used to generate all hydro-breaklines through heads-up digitization.  All ground (ASPRS class 2) lidar data inside of the Inland Ponds and Lakes, and Inland Streams and Rivers are classified to water (ASPRS class 9).  A buffer of 2.5 feet was used around each hydro-flattened feature to classify ground (ASPRS class 2) to ignored ground (ASPRS class 20).  Island features were checked to ensure that Ground point (ASPRS class 2) remained classified as Ground.  Ground points (ASPRS class 2) within 2.5 feet of bridge breaklines, used to reduce triangulation between bridge decks were also classified to Ignored ground (ASPRS class 20).  All bridge decks were classified to Bridge deck (ASPRS class 17).  All remaining points were filtered, or manually classified to their respective point classification; processed (ASPRS class 1), low vegetation (ASPRS class 3), medium vegetation (ASPRS class 4), high vegetation (ASPRS class 5), buildings (ASPRS class 6), low noise (ASPRS class 7), high noise (ASPRS class 18).  TerraScan v019.019 was used to identify the overlap flag and bit set flags to LAS v1.4 specifications. LP360 64bit was used to deduce the Well Known Text (WKT) and an ASI proprietary software was used to format the LAS to the final LAS v1.4 Format 6 version. LAStools by rapidlasso GmbH, open source, lasinfo (open source LGPL) and an ASI proprietary software was used to perform final analysis to checks on LAS header information, LAS point classes, and LAS timestamps.</procdesc>
+        <!-- Process Description - an explanation of the the processing step and parameters used. Include Flight, Imagery development, Analysis. Type: text. Domain: free text-->
+        <procdate>20200923</procdate>
+        <!-- Process Date - the date when the processing step was completed. Date must be formatted YYYYMMDD. Type: text. Domain: "Unknown" "Not complete" free date. -->
+      </procstep>
+	  <procstep>
+        <!-- Process Step - information about a single processing step. Type: compound. -->
+        <procdesc>Data was tested at 0.5 meter nominal pulse spacing and a 4 pulses per meter. The nominal pulse spacing was tested on classified tiled LAS using geometrically reliable first-return points. NPS was tested using Delaunay Triangulation that produced average point spacing between all nearest neighbors.</procdesc>
+        <!-- Process Description - description of the TESTED values of NPS/ANPS and NPD/ANPD (in meters). Description of the method used by the contractor to test pulse spacing and pulse density. Type: text. Domain: free text-->
+        <!-- Until there is an ASPRS defined method for testing ANPS/ANPD, please provide the contractor's method for testing. -->
+        <procdate>20200609</procdate>
+        <!-- Process Date - the date when the processing step was completed. The field MUST be formatted YYYYMMDD Type: text. Domain: "Unknown" "Not complete" free date. -->
+      </procstep>
+    </lineage>
+  </dataqual>
+  <spdoinfo>
+    <!-- Spatial Data Organization Information. Type: compound. -->
+    <direct>Point</direct>
+    <!-- Direct Spatial Reference Method - the system of objects used to represent space in the data set. Type: text. Domain:  "Point" -->
+      <ptvctinf>
+    	<!-- Point and Vector Object Information - the types and numbers of vector or nongridded point spatial objects in the data set. Type: Compound. -->
+    	<sdtsterm>
+    		<!-- SDTS Terms Description - point and vector object information using the terminology and concepts from "Spatial Data Concepts," which is Chapter 2 of Part 1 in Department of Commerce, 1992, Spatial Data Transfer Standard (SDTS) (Federal Information Processing Standard 173): Washington, Department of Commerce, National Institute of Standards and Technology. (Note that this reference to the SDTS is used ONLY to provide a set of terminology for the point and vector objects.). Type: Compound. -->
+    		<sdtstype>Point</sdtstype>
+    		<!-- SDTS Point and Vector Object Type - name of point and vector spatial objects used to locate zero-, one-, and two-dimensional spatial locations in the data set. Domain: (The domain is from "Spatial Data Concepts," which is Chapter 2 of Part 1 in Department of Commerce, 1992, Spatial Data Transfer Standard (SDTS) (Federal Information Processing Standard 173): Washington, Department of Commerce, National Institute of Standards and Technology): "Point" "Entity point" "Label point" "Area point" "Node, planar graph" "Node, network" "String" "Link" "Complete chain" "Area chain" "Network chain, planar graph" "Network chain, nonplanar graph" "Circular arc, three point center" "Elliptical arc" "Uniform B-spline" "Piecewise Bezier" "Ring with mixed composition" "Ring composed of strings" "Ring composed of chains" "Ring composed of arcs" "G-polygon" "GT-polygon composed of rings" "GT-polygon composed of chains" "Universe polygon composed of rings" "Universe polygon composed of chains" "Void polygon composed of rings" "Void polygon composed of chains"-->
+    		<ptvctcnt>22,305,954,161</ptvctcnt>
+    		<!-- Point and Vector Object Count - the total number of the point or vector object type occurring in the data set. Type: integer. Domain: Point and Vector Object Count > 0 -->
+    	</sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+ <spref>
+  <!-- Spatial Reference Information. Type: compound. -->
+  <horizsys>
+      <!-- Horizontal Coordinate System Definition. Type: compound. -->
+      <planar>
+        <!-- Planar. Type: compound -->
+        <gridsys>
+          <!-- Grid Coordinate System - this section should be filled out with the relevant parameters for the coordinate reference system for the data. Typically it is UTM or State Plane Zone. -->
+          <gridsysn>State Plane Coordinate System 1983</gridsysn>
+          <!-- Grid Coordinate System Name - name of the grid coordinate system. Type: text. Domain: "Universal Transverse Mercator" "Universal Polar Stereographic" "State Plane Coordinate System 1927" "State Plane Coordinate System 1983" "ARC Coordinate System" "other grid system" -->
+          <spcs>
+            <!-- Universal Transverse Mercator (UTM) - a grid system based on the transverse mercator projection, applied between latitudes 84 degrees north and 80 degrees south on the Earth's surface. Type: compound. -->
+            <spcszone>NAD 1983 2011 Illinois East State Plane (FIPS 1201)</spcszone>
+            <!-- UTM Zone Number - identifier for the UTM zone. Type: integer. Domain: 1 <= UTM Zone <= 60 for the northern hemisphere; -60 <= UTM Zone Number <= -1 for the southern hemisphere -->
+            <transmer>
+              <!-- Transverse Mercator - contains parameters for the Transverse Mercator projection. Type: compound. -->
+              <sfctrmer>0.999975</sfctrmer>
+              <!-- Scale Factor at Central Meridian - a multiplier for reducing a distance obtained from a map by computation or scaling to the actual distance along the central meridian. Type: real. Domain: Scale Factor at Central Meridian > 0.0 -->
+              <longcm>-88.33333333</longcm>
+              <!-- Longitude of Central Meridian - the line of longitude at the center of a map projection generally used as the basis for contructing the projection. Type: real. Domain: -180.0 <= Longitude of Central Meridian < 180.0 -->
+              <latprjo>36.66666667</latprjo>
+              <!-- Latitude of Projection Origin - latitude chosen as the origin of rectangular coordinates for a map projection. Type: real. Domain: -90.0 <= Latitude of Projection Origin <= 90.0 -->
+              <feast>984250</feast>
+              <!-- False Easting - the value added to all "x" values in the rectangular coordinates for a map projection. This value frequently is assigned to eliminate negative numbers. Expressed in the unit of measure identified in Planar Coordinate Units. Type: real. Domain: free real -->
+              <fnorth>0.0</fnorth>
+              <!-- False Northing - the value added to all "y" values in the rectangular coordinates for a map projection. This value frequently is assigned to eliminate negative numbers. Expressed in the unit of measure identified in Planar Coordinate Units. Type: real. Domain: free real -->
+            </transmer>
+          </spcs>
+        </gridsys>
+        <planci>
+          <!-- Planar Coordinate Information. Type: compound. -->
+          <plance>row and column</plance>
+          <!--  Planar Coordinate Encoding Method - the means used to represent horizontal positions. Type: text. Domain: "row and column" -->
+          <coordrep>
+            <!-- Coordinate Representation - the method of encoding the position of a point by measuring its distance from perpendicular reference axes (the "coordinate pair" method). Type: compound. -->
+            <absres>2</absres>
+            <!-- Abscissa Resolution - the (nominal) minimum distance between the "x" or column values of two adjacent points, expressed in Planar Distance Units of measure. Type: real. Domain: Abscissa Resolution > 0.0 -->
+            <ordres>2</ordres>
+            <!-- Ordinate Resolution - the (nominal) minimum distance between the "y" or row values of two adjacent points, expressed in Planar Distance Units of measure. Type: real. Domain: Ordinate Resolution > 0.0 -->
+          </coordrep>
+          <plandu>US Survey Feet</plandu>
+          <!-- Planar Distance Units - units of measure used for distances. Type: text. Domain: "meters" "international feet" "US survey feet" free text -->
+        </planci>
+      </planar>
+      <geodetic>
+        <!-- Geodetic Model - parameters for the shape of the earth. Type: compound. -->
+        <horizdn>North American Datum of 1983 2011</horizdn>
+        <!-- Horizontal Datum Name - the identification given to the reference system used for defining the coordinates of points. Type: text. Domain: "North American Datum of 1927" "North American Datum of 1983" free text -->
+        <ellips>Geodetic Reference System 1980</ellips>
+        <!-- Ellipsoid Name - identification given to established representations of the Earth's shape. Type: text. Domain: "Clarke 1866" "Geodetic Reference System 80" free text. -->
+        <semiaxis>6378137</semiaxis>
+        <!-- Semi-major Axis - radius of the equatorial axis of the ellipsoid. Type: real. Domain: Semi-major Axis > 0.0 -->
+        <denflat>298.25722101</denflat>
+        <!-- Denominator of Flattening Ratio - the denominator of the ratio of the difference between the equatorial and polar radii of the ellipsoid when the numerator is set to 1. Type: real. Domain: Denominator of Flattening > 0.0 -->
+      </geodetic>
+    </horizsys>
+	<vertdef>
+      <!-- Vertical Coordinate System Definition - the reference frame or system from which vertical distances (altitudes or depths) are measured. Type: compound. -->
+      <altsys>
+        <!-- Altitude System Definition - the reference frame or system from which altitudes (elevations) are measured. Type: compound. -->
+        <altdatum>North American Vertical Datum of 1988, Geoid 12B</altdatum>
+        <!-- Altitude Datum Name. Type: text. Domain: "National Geodetic Vertical Datum of 1929" "North American Vertical Datum of 1988" free text-->
+        <altres>0.01</altres>
+        <!-- Altitude Resolution - the minimum distance possible between two adjacent altitude values, expressed in Altitude Distance Units of measure. Type: real. Domain: Altitude Resolution > 0.0 -->
+        <altunits>US survey feet</altunits>
+        <!-- Altitude Distance Units - units in which altitudes (elevations) are recorded.  Type: text.  Domain: "meters" "international feet" "US survey feet" free text-->
+        <altenc>Explicit elevation coordinate included with horizontal coordinates</altenc>
+        <!-- Altitude Encoding Method - the means used to encode the altitudes. Type: text. Domain: "Explicit elevation coordinate included with horizontal coordinates" -->
+      </altsys>
+    </vertdef>
+ </spref>
+  <metainfo>
+    <!-- Metadata Reference Information - information on the currentness of the metadata information, and the responsible party. Type: compound. -->
+    <metd>20200924</metd>
+    <!-- Metadata Date - the date that the metadata were created or last updated. Type: date. Domain: free date. -->
+    <metc>
+      <!-- Metadata Contact - the party responsible for the metadata information. Type: compound. -->
+      <cntinfo>
+        <!-- Contact Information - Identity of, and means to communicate with, person(s) and organization(s) associated with the data set.Type: compound. -->
+        <cntorgp>
+          <!-- Contact Organization Primary - the organization, and the member of the organization, associated with the data set. Type: compound. -->
+          <cntorg>Aerial Services, Inc.</cntorg>
+          <!-- Contact Organization - the name of the organization. Type: text. Domain: free text. -->
+        </cntorgp>
+        <cntaddr>
+          <!-- Contact Address - the address for the organization or individual. Type: compound. -->
+          <addrtype>mailing and physical</addrtype>
+          <!-- Address Type. Type: text. Domain: "mailing" "physical" "mailing and physical", free text. -->
+          <address>6315 Chancellor Dr.</address>
+          <!-- Address - an address line for the address. Type: text. Domain: free text. -->
+          <city>Cedar Falls</city>
+          <!-- City - the city of the address. Type: text. Domain: free text. -->
+          <state>IA</state>
+          <!-- State or Province - the state or province of the address. Type: text. Domain: free text. -->
+          <postal>50613</postal>
+          <!-- Postal Code - the ZIP or other postal code of the address. Type: text. Domain: free text. -->
+          <country>USA</country>
+          <!-- Country - the country of the address. Type: text. Domain: free text. -->
+        </cntaddr>
+        <cntvoice>(319)277-0436</cntvoice>
+        <!-- Contact Voice Telephone - the telephone number by which individuals can speak to the organization or individual. Type: text. Domain: free text. -->
+      </cntinfo>
+    </metc>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <!-- Metadata Standard Name - the name of the metadata standard used to document the data set. Type: text. Domain: "FGDC Content Standard for Digital Geospatial Metadata" free text -->
+    <metstdv>FGDC-STD-001-1998</metstdv>
+    <!-- Metadata Standard Version - identification of the version of the metadata standard used to document the data set. Type: text. Domain: free text. -->
+    <metac>None.</metac>
+    <!-- Metadata Access Constraints - restrictions and legal prerequisites for accessing the metadata. These include any access constraints applied to assure the protection of privacy or intellectual property, and any special restrictions or limitations on obtaining the metadata. Domain: free text -->
+    <metuc>None.</metuc>
+    <!-- Metadata Use Constraints - restrictions and legal prerequisites for using the metadata after access is granted. These include any metadata use constraints applied to assure the protection of privacy or intellectual property, and any special restrictions or limitations on using the metadata. Domain: free text. -->
+    <metsi>
+    	<!-- Metadata Security Information - handling restrictions imposed on the metadata because of national security, privacy, or other concerns. Type: compound. -->
+    	<metscs>None.</metscs>
+    	<!-- Metadata Security Classification System - name of the classification system for the metadata. Domain: free text -->
+    	<metsc>Unclassified.</metsc>
+    	<!-- Metadata Security Classification - name of the handling restrictions on the metadata. Domain: "Top secret" "Secret" "Confidential" "Restricted" "Unclassified" "Sensitive" free text -->
+    	<metshd>None.</metshd>
+    	<!-- Metadata Security Handling Description - additional information about the restrictions on handling the metadata. Domain: free text. -->
+    </metsi>
+    <metextns>
+    	<!-- Metadata Extensions - a reference to extended elements to the standard which may be defined by a metadata producer or a user community. Extended elements are elements outside the Standard, but needed by the metadata producer. If extended elements are created, they must follow the guidelines in Appendix D, Guidelines for Creating Extended Elements to the Content Standard for Digital Geospatial Metadata. Type: Compound -->
+      <onlink>None.</onlink>
+      <!-- Online Linkage - the name of an online computer resource that contains the metadata extension information for the data set. Entries should follow the Uniform Resource Locator convention of the Internet. Domain: free text. -->
+      <metprof>None.</metprof>
+      <!-- Profile Name - the name given to a document that describes the application of the Standard to a specific user community. Domain: free text. -->
+    </metextns>
+  </metainfo>
+</metadata>

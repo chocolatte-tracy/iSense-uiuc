@@ -1,6 +1,7 @@
 import type { RouteEvidence } from './campus-observations';
 import type { SunContext } from './sun-context';
 import { rankingMetricEvidence, type RankingMetricEvidence } from './ranking-evidence';
+import { boundAutomaticSunlight, modelAwareSunContext, usableAutomaticSunlight, type AutomaticSunlight } from './solar-ranking';
 
 export type AcceptanceLevel = 'low' | 'medium' | 'high';
 export type WeightKey = 'avoidNoise' | 'avoidCrowds' | 'preferShade' | 'prioritizeShortWalkingTime';
@@ -89,6 +90,7 @@ export type DemoRoute = {
   sunExposureCost: number;
   directSunlightExcluded?: boolean;
   daytimeSunExposureCost?: number;
+  automaticSunlight?: AutomaticSunlight;
   sensoryEvidence?: RouteEvidence;
   coordinates: [number, number][];
   candidateWaypoints: CandidateWaypoint[];
@@ -118,6 +120,11 @@ export type ScoredRoute = DemoRoute & {
 
 export function applySunContext(route: DemoRoute, context?: SunContext): DemoRoute {
   const original = route.daytimeSunExposureCost ?? route.sunExposureCost;
+  const prediction = usableAutomaticSunlight(route, context?.departureTime);
+  if (prediction) return { ...route, directSunlightExcluded: false };
+  // Never leave a previously modeled result attached after departure changes.
+  if (route.automaticSunlight && !boundAutomaticSunlight(route, context?.departureTime))
+    route = { ...route, automaticSunlight: undefined };
   if (context?.phase === 'nighttime') return {
     ...route, sunExposureCost: 0, daytimeSunExposureCost: original, directSunlightExcluded: true,
   };
@@ -141,6 +148,7 @@ export function rankRoutes(
   sunContext?: SunContext,
 ): ScoredRoute[] {
   if (routes.length === 0) return [];
+  sunContext = modelAwareSunContext(routes, sunContext);
   routes = routes.map(route => applySunContext(route, sunContext));
   const fastest = Math.min(...routes.map((route) => route.walkingTimeMinutes));
   const slowest = Math.max(...routes.map((route) => route.walkingTimeMinutes));
