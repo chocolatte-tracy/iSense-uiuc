@@ -1,0 +1,67 @@
+import type { DemoRoute } from './route-scoring';
+
+// Research candidates retain DEMO DATA costs: waypoint samples are not verified
+// geometry and must never inherit observations from a nearby campus segment.
+export const demoRoutes: DemoRoute[] = [
+  {
+    id: 'route-a',
+    routeCode: 'A',
+    name: 'Route A — via unnamed roads',
+    originId: 'main-quad',
+    destinationId: 'grainger-library',
+    originName: 'Main Quad, University of Illinois Urbana-Champaign',
+    destinationName: 'Grainger Engineering Library, University of Illinois Urbana-Champaign',
+    walkingTimeMinutes: 9,
+    distanceMiles: 0.4,
+    noiseCost: 24,
+    crowdCost: 31,
+    sunExposureCost: 28,
+    coordinates: [],
+    candidateWaypoints: [
+      { latitude: 40.109418, longitude: -88.227915 },
+      { latitude: 40.1111, longitude: -88.227743 },
+    ],
+    researchSourceUrl: 'https://maps.app.goo.gl/G8fQKGbxmU5nktRr6',
+  },
+  {
+    id: 'route-b',
+    routeCode: 'B',
+    name: 'Route B — via W Green St',
+    originId: 'main-quad',
+    destinationId: 'grainger-library',
+    originName: 'Main Quad, University of Illinois Urbana-Champaign',
+    destinationName: 'Grainger Engineering Library, University of Illinois Urbana-Champaign',
+    walkingTimeMinutes: 9,
+    distanceMiles: 0.4,
+    noiseCost: 58,
+    crowdCost: 63,
+    sunExposureCost: 52,
+    coordinates: [],
+    candidateWaypoints: [
+      { latitude: 40.108808, longitude: -88.226757 },
+      { latitude: 40.11038, longitude: -88.226476 },
+    ],
+    researchSourceUrl: 'https://maps.app.goo.gl/GWZgo8hSFYyLN3q89',
+  },
+  {
+    id: 'route-c',
+    routeCode: 'C',
+    name: 'Route C — via S Wright St',
+    originId: 'main-quad',
+    destinationId: 'grainger-library',
+    originName: 'Main Quad, University of Illinois Urbana-Champaign',
+    destinationName: 'Grainger Engineering Library, University of Illinois Urbana-Champaign',
+    walkingTimeMinutes: 10,
+    distanceMiles: 0.5,
+    noiseCost: 18,
+    crowdCost: 22,
+    sunExposureCost: 68,
+    coordinates: [],
+    candidateWaypoints: [
+      { latitude: 40.108544, longitude: -88.228802 },
+      { latitude: 40.109699, longitude: -88.228124 },
+      { latitude: 40.110516, longitude: -88.227728 },
+    ],
+    researchSourceUrl: 'https://maps.app.goo.gl/4zw9sjThFmVHrguSA',
+  },
+];

@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "iSense"
+description = "A mobile-first UIUC route comparison app that ranks researched walking candidates by sensory preferences. Noise, crowd, and sunlight scores remain labeled demo data while candidate routes await validation."
+version = "1.0.0"
+id = "artifacts/quiet-campus"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21714
+
+[services.development]
+run = "pnpm --filter @workspace/quiet-campus run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/quiet-campus", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/quiet-campus/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21714"
+BASE_PATH = "/"

@@ -1,0 +1,41 @@
+.places-results-group {
+  border-top: 1px solid rgba(91, 112, 119, .18);
+  margin-top: 5px;
+  padding-top: 3px;
+}
+.places-results-group .location-suggestions-title {
+  padding-top: 8px;
+}
+.places-results-group > p {
+  margin: 6px 9px;
+  color: #64747a;
+  font-size: 11px;
+  line-height: 1.45;
+}
+.places-results-group [role="alert"] {
+  color: #8a5149;
+}
+.places-attribution {
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px 9px 2px;
+  gap: 3px;
+  color: #394b52;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  line-height: 1.25;
+}
+.places-attribution-google {
+  font-weight: 500;
+}
+.places-attribution-maps {
+  font-weight: 400;
+}
+.places-resolving {
+  flex: none;
+  color: #687980;
+  font-size: 10px;
+}
+@media (max-width: 600px) {
+  .places-results-group > p { font-size: 12px; }
+}

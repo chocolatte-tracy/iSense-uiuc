@@ -1,0 +1,12 @@
+{
+  "name": "@workspace/campus-routing",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "devDependencies": { "@types/node": "catalog:" },
+  "exports": {
+    "./routing": { "types": "./src/routing.d.ts", "default": "./src/routing.js" },
+    "./waypoints": { "types": "./src/waypoints.d.ts", "default": "./src/waypoints.js" },
+    "./proxy": { "types": "./server/proxy.d.ts", "default": "./server/proxy.js" }
+  }
+}

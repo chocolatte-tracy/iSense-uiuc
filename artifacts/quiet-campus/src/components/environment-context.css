@@ -1,0 +1,21 @@
+.environment-context {
+  display: flex;
+  align-items: flex-start;
+  gap: .65rem;
+  flex: none;
+  align-self: center;
+  width: min(1040px, calc(100% - 28px));
+  box-sizing: border-box;
+  margin: .5rem 0 .25rem;
+  padding: .8rem 1rem;
+  border: 1px solid #d5e6ed;
+  border-radius: 16px;
+  background: #edf5f8;
+  color: #385465;
+  font-size: .8rem;
+  line-height: 1.5;
+}
+.environment-context > svg { flex-shrink: 0; margin-top: .2rem; }
+.environment-context strong { display: block; font-weight: 600; }
+.environment-context span { display: block; font-size: .74rem; overflow-wrap: anywhere; }
+.environment-context .environment-simulation { color: #7c4c2f; margin-top: .2rem; }

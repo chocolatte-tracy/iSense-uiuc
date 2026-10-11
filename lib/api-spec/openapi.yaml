@@ -1,0 +1,239 @@
+openapi: 3.1.0
+info:
+  # Do not change the title, if the title changes, the import paths will be broken
+  title: Api
+  version: 0.1.0
+  description: API specification
+servers:
+  - url: /api
+    description: Base API path
+tags:
+  - name: health
+    description: Health operations
+paths:
+  /community-reports:
+    get:
+      operationId: listCommunityReports
+      summary: Recent unverified community observations, independent of route scoring
+      responses:
+        "200":
+          description: Up to 100 recent shared observations
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/CommunityReports" }
+    post:
+      operationId: createCommunityReport
+      summary: Submit an anonymous campus observation
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/CommunityReportInput" }
+      responses:
+        "201":
+          description: Saved shared observation
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/CommunityReport" }
+        "400":
+          description: Invalid values, geographic area or observation time
+        "429":
+          description: Submission limit reached
+        "503":
+          description: Shared storage unavailable
+  /maps/config:
+    get:
+      operationId: getGoogleMapsConfig
+      summary: Public browser configuration; never returns the server key
+      responses:
+        "200":
+          description: Configuration including the restricted public browser key only when enabled
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/GoogleMapsConfig" }
+  /walking-routes:
+    post:
+      operationId: fetchWalkingRoutes
+      summary: Walking routes through the teammate's existing Google Routes adapter
+      description: Requires independent Routes approval, an allowed Origin, and an atomic persistent cost reservation. Owner-enabled public mode uses validated campus coordinates, anonymous signed client and transport-peer limits; otherwise private team bearer authorization is required. No automatic retries.
+      security:
+        - {}
+        - TeamRoutingAccess: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/WalkingRouteInput" }
+      responses:
+        "200":
+          description: Google route geometry and travel estimates
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/WalkingRouteResult" }
+        "400":
+          description: Invalid input
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/RoutingFailure" }
+        "401":
+          description: Missing or invalid team access code
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/RoutingFailure" }
+        "403":
+          description: Origin denied
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/RoutingFailure" }
+        "502":
+          description: Invalid or failed Google response
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/RoutingFailure" }
+        "503":
+          description: Integration disabled or configuration incomplete
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/RoutingFailure" }
+        "429":
+          description: Shared spending, lifetime, daily, minute, concurrency limit, or Google quota exceeded
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/RoutingFailure" }
+        "504":
+          description: Google request timed out
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/RoutingFailure" }
+  /healthz:
+    get:
+      operationId: healthCheck
+      tags: [health]
+      summary: Health check
+      description: Returns server health status
+      responses:
+        "200":
+          description: Healthy
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+components:
+  securitySchemes:
+    TeamRoutingAccess:
+      type: http
+      scheme: bearer
+      description: Separate team routing access code; not a Google key or user account.
+  schemas:
+    CommunityReportInput:
+      type: object
+      additionalProperties: false
+      required: [locationName, latitude, longitude, noise, crowds, observedAt]
+      properties:
+        locationName: { type: string, minLength: 1, maxLength: 80 }
+        latitude: { type: number, minimum: 40.07, maximum: 40.15 }
+        longitude: { type: number, minimum: -88.29, maximum: -88.17 }
+        noise: { type: string, enum: [quiet, moderate, loud] }
+        crowds: { type: string, enum: [low, moderate, high] }
+        observedAt: { type: string, format: date-time }
+    CommunityReport:
+      allOf:
+        - { $ref: "#/components/schemas/CommunityReportInput" }
+        - type: object
+          required: [id, createdAt, verified]
+          properties:
+            id: { type: string }
+            createdAt: { type: string, format: date-time }
+            verified: { type: boolean, enum: [false] }
+    CommunityReports:
+      type: object
+      required: [storage, reports]
+      properties:
+        storage: { type: string, enum: [shared] }
+        reports:
+          type: array
+          items: { $ref: "#/components/schemas/CommunityReport" }
+    GoogleMapsConfig:
+      type: object
+      required: [enabled, message]
+      properties:
+        enabled: { type: boolean }
+        routesEnabled: { type: boolean }
+        publicRoutesEnabled: { type: boolean }
+        placesEnabled: { type: boolean }
+        integrationVersion: { type: string }
+        mapStatus: { type: string }
+        placesStatus: { type: string }
+        routingStatus: { type: string }
+        browserKeyPresent: { type: boolean }
+        routingKeyPresent: { type: boolean }
+        clientLimitsConfigured: { type: boolean }
+        budgetConfigured: { type: boolean }
+        budgetConfigurationIssues: { type: array, items: { type: string } }
+        placesMessage: { type: string }
+        routingMessage: { type: string }
+        message: { type: string }
+        browserApiKey: { type: string }
+    RoutePoint:
+      type: object
+      required: [lat, lng]
+      properties:
+        lat: { type: number, minimum: -90, maximum: 90 }
+        lng: { type: number, minimum: -180, maximum: 180 }
+    RouteEndpoint:
+      oneOf:
+        - { type: string, minLength: 1, maxLength: 300 }
+        - { $ref: "#/components/schemas/RoutePoint" }
+    WalkingRouteInput:
+      type: object
+      additionalProperties: false
+      required: [origin, destination]
+      properties:
+        origin: { $ref: "#/components/schemas/RouteEndpoint" }
+        destination: { $ref: "#/components/schemas/RouteEndpoint" }
+    WalkingRoute:
+      type: object
+      required: [id, durationSeconds, durationMinutes, distanceMeters, encodedPolyline, path, labels]
+      properties:
+        id: { type: string }
+        durationSeconds: { type: number, minimum: 0 }
+        durationMinutes: { type: number, minimum: 0 }
+        distanceMeters: { type: number, minimum: 0 }
+        encodedPolyline: { type: string, minLength: 1 }
+        path:
+          type: array
+          minItems: 2
+          items: { $ref: "#/components/schemas/RoutePoint" }
+        labels:
+          type: array
+          items: { type: string }
+    WalkingRouteResult:
+      type: object
+      required: [source, routes, alternativesReturned, routeCount]
+      properties:
+        source: { type: string, enum: [google-routes-live] }
+        alternativesReturned: { type: boolean }
+        routeCount: { type: integer, minimum: 0 }
+        rawResponse: { type: object, additionalProperties: true }
+        routes:
+          type: array
+          items: { $ref: "#/components/schemas/WalkingRoute" }
+    RoutingFailure:
+      type: object
+      required: [error]
+      properties:
+        error: { $ref: "#/components/schemas/RoutingFailureDetail" }
+    RoutingFailureDetail:
+      type: object
+      required: [code, message]
+      properties:
+        code: { type: string }
+        message: { type: string }
+    HealthStatus:
+      type: object
+      properties:
+        status:
+          type: string
+      required:
+        - status
+

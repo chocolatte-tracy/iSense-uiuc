@@ -1,0 +1,16 @@
+.trip-sun-notice {
+  margin: 10px 0;
+  padding: 12px;
+  border: 1px solid #d1ded9;
+  border-radius: 10px;
+  background: #f5f8f6;
+  color: #3f5b67;
+  font-size: 12px;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+.trip-sun-notice > strong { display: block; }
+.trip-sun-notice p { margin: 6px 0 0; }
+.trip-sun-notice ul { margin: 8px 0; padding-left: 18px; }
+.trip-sun-notice li + li { margin-top: 6px; }
+.trip-sun-notice .trip-sun-limits { font-size: 11px; color: #586e7b; }

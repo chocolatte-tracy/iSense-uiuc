@@ -1,0 +1,1793 @@
+{
+  "source_commit": "3e7e6afdc0643bb4d4eed4e1b2eeb4d1156a0612",
+  "source_snapshot": "Current iSense workspace; no old Git history",
+  "excluded_categories": [
+    "private agent context",
+    "uploaded attachments",
+    "environment files and keys",
+    "dependencies",
+    "builds, logs and generated artifacts"
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "30700363398d06ddc0b1108ad508d6bccddc0ddf3b51bd4878724010d29ddc14",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": ".npmrc",
+      "sha256": "1ded4f26f4851b35dae702edd5719d1be5ff31db6983858d088d5e6593ea7c99",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": ".replit",
+      "sha256": "302b56dadad31d91660c17c91473675d2c8ed70255a2c405871df4870ea4aac6",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": ".replitignore",
+      "sha256": "1f78f03e45e9d00e6c41e12971d437fd2ae184f2b976fafab408d895ba529e8c",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "README.md",
+      "sha256": "bd537be8b2fc9513b10f06fe52da2db802253f2281097de33e25aa20fb71cd48",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/api-server/.replit-artifact/artifact.toml",
+      "sha256": "e461708bfe50f6eb964fa755cf0c6ba813c19392be055d5ef96c729aa0173539",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/api-server/ROUTING_SAFETY.md",
+      "sha256": "6bb39466b4732c17a7fc6e417d83d85e6078085407beca08f8e4fe9bb1f5b2a1",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/api-server/build.mjs",
+      "sha256": "a268757bc319f2ccaf2f2661d6616ea9cab3c8d8bc45b46b0ebfdb2bc6180267",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/api-server/package.json",
+      "sha256": "c3fe800993e6e9f37c74e9e25a28a2fecf9d000067203fad016eb0a7c0b6eeb4",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/api-server/src/app.ts",
+      "sha256": "5d6aa81dc20a6fe07d2542756835032dca8dcf3599ea5acb39a9878316723dc2",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/api-server/src/index.ts",
+      "sha256": "9c1f296e0008006b40d766ee436697e43ef99cf907f2c7afe9a6cd2d6c118d3c",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/api-server/src/lib/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/api-server/src/lib/community-reports.test.ts",
+      "sha256": "287d3ea429bb58284dbe21e69e1f3897813f0c9288b522ef37a0106d599db614",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/api-server/src/lib/community-reports.ts",
+      "sha256": "0d6ebc9ad081a2262b2f123b3ccc3c8aa79bf7f5523a7d6bef7c0beb4683bb4f",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/api-server/src/lib/google-config.test.mjs",
+      "sha256": "395bcc914d0f2f20f4130d329db650dd8ecebc9dbca3af47bc93b48ce3355faa",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/api-server/src/lib/google-error.test.mjs",
+      "sha256": "299217120ed091ca81a53fa97cceb5ad3d3cb6fb5dcbf2d8e82264ce0fd301e4",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/api-server/src/lib/google-routes.d.mts",
+      "sha256": "f76549126a6a7f347a04960cf01c84e2bd6ae992a35870da0cbd2a11150de442",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/api-server/src/lib/google-routes.mjs",
+      "sha256": "48e8495ef771ca19baa7c82635cabec9ede68a566e0901286aeafbd8af02760b",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/api-server/src/lib/google-routes.test.mjs",
+      "sha256": "5f2eb9fb3b8ad080336d19b3e8c0ff744faa88c1236d2866bbe5c4bad9476d32",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/api-server/src/lib/logger.ts",
+      "sha256": "29e1ca75036fe917595a3a74fd450857d845836fe0625c30b9caa02df4acba62",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/api-server/src/lib/public-client.test.ts",
+      "sha256": "67c1c001162214dad567989d0283c1df2bd4d997ccb569bb1123f972a9988fc1",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/api-server/src/lib/public-client.ts",
+      "sha256": "0346a996fafbaf3750bf5ecba9f93ea1b5b1d25a36dfa23b8b4433770271db7a",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/api-server/src/lib/public-routing.test.ts",
+      "sha256": "e50987a7cd27c316f1891f09858e1e71fca6161a6714e9d22394f391ee3e90de",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/api-server/src/lib/public-routing.ts",
+      "sha256": "9b192fb4f697844dc63abb52847b24c888eb544a37f016394d6b593b62c87778",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/api-server/src/lib/public-walking-routes.test.ts",
+      "sha256": "b4ef55154cc91dde1aa4ef3c8327b30e0ed17a4fecd30e3906430d35a61084cb",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/api-server/src/lib/routing-budget.test.ts",
+      "sha256": "077e55729f6d6b4924d2652d939b367da69ffe8e089d4a521aa3e04501d33bea",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/api-server/src/lib/routing-budget.ts",
+      "sha256": "dd548544973659922efff0259576df1af523198fcc48c780bc47798e84c1ac44",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/api-server/src/lib/team-routing-access.ts",
+      "sha256": "fa10ec209a1b1cce28b3a0d4d843eab73b7da45b2804f9306ec458dc67988db2",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/api-server/src/lib/walking-routes.test.ts",
+      "sha256": "bbaf1f9f0c0fb0e6a1486279e771eccdc6e5d6652bea09fbfd9dd334e1ebd3f9",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/api-server/src/middlewares/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/api-server/src/routes/community-reports.ts",
+      "sha256": "b50d7dec93059c5873fe106444df5d0dabaae6b3f1c01d6a92d4dcd5f5317c34",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/api-server/src/routes/health.ts",
+      "sha256": "0386ceddb4ff4bff220af72ca38a62191ad95a2f41fd619df3bb9ceffce03db2",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/api-server/src/routes/index.ts",
+      "sha256": "c0a755e673118a113d7fd4a9202cb223600e4148f0c1a484e124397d6986abe8",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/api-server/src/routes/maps.ts",
+      "sha256": "0635ff7f967314c2a3152527b69fe43664d2ae4e0f760515c89cdf789482f46f",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/api-server/src/routes/walking-routes.ts",
+      "sha256": "a1d08300d0050ed48913b11107e5b933535d55ed31aaa66a145dcedfb180e071",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/api-server/tsconfig.json",
+      "sha256": "aa300909ccd1d4282761b5d6549a174717b663bb56cb0f59d107d4b3d96cb009",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/.replit-artifact/artifact.toml",
+      "sha256": "e259a07aa72cd0a1d06c141f4aa00c16aa6942443ddf17b7cb59e88a9882f4f9",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/components.json",
+      "sha256": "aa1b56411ed0e8fc2ac14315f211c7059406e03d68666e1921f640186b8c096f",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/index.html",
+      "sha256": "fa4111c44a19ea399d44d7c6486387ffd49d9f21459ac87906ded4dd5c2bcb6c",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/mockupPreviewPlugin.ts",
+      "sha256": "4d579d37f3d3d12ec8d8d78571b651c606ed44b07fb04a53aff02bcc75621cfd",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/package.json",
+      "sha256": "4b1279fc2746617e4a19dcd4dc8ca99b1e4888b5f1f1ab5bdc03357851adaa02",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/public/images/isense-before-polish.png",
+      "sha256": "87348fbc4a96543df0c8e90764d68b98ced63c4fb8e4d83cde553df864745778",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/public/images/isense-native-before.png",
+      "sha256": "87348fbc4a96543df0c8e90764d68b98ced63c4fb8e4d83cde553df864745778",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/.generated/mockup-components.ts",
+      "sha256": "7006dc68ca6e846678990ff63849c5df4c7a6bdc8dd0b10a4f75988f59f6c84f",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/App.tsx",
+      "sha256": "0e0e60da88a64ef68a930565bb5c5d326896aaa0f9cea62702eef4c02db2462a",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/mockups/isense-mobile-polish/Current.tsx",
+      "sha256": "dff0c229d34f8395e770d447102c2d1c401f68dc6a537d83748286c6f0c6637f",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/mockups/isense-mobile-polish/_group.css",
+      "sha256": "6fc04743adc208557b227a540015ed3b1e0e4a44413c485878353546ab2170f6",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/mockups/isense-mobile-polish/_shared/campus-locations.ts",
+      "sha256": "18d97630e259f2ce06e9aed03e6e0d217ad247c41de19c4a260f910b4fe5f008",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/mockups/isense-mobile-polish/_shared/environment-context.css",
+      "sha256": "44df823b88449b8c9236273152ef5128e4d1e40ab748c7d55edd0d2823e9ac67",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/mockups/isense-mobile-polish/_shared/environment-context.tsx",
+      "sha256": "c3c8bacf6f30410e020ef4fc3a1c7f2b25b6408854f6700d966b4103098fdcb4",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/mockups/isense-mobile-polish/_shared/google-campus-map.tsx",
+      "sha256": "3abe017d1ecf5da4be2d737293eb8fb727af0fc0c86b26a4309380db36f7d4b4",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/mockups/isense-mobile-polish/_shared/location-search.tsx",
+      "sha256": "8ff0cdc42f44cb5f48880c192f33546871e60e6df5e6eca9ea84989eabf3551c",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/mockups/isense-mobile-polish/_shared/map-screen.tsx",
+      "sha256": "187a79c77e3d930e09454852780437d14ab2d9f77041865ff15e43a1d43f38aa",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/mockups/isense-mobile-polish/_shared/mobile-navigation.tsx",
+      "sha256": "51c18402f228900fb739ba3deb0e4135130532b02b14c36252b497b1010fcccd",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/mockups/isense-mobile-polish/_shared/places-search.css",
+      "sha256": "b347256060818a6e9fd7cc2f82992bbb3e9ad9cba2870b735e02f78503e9e90f",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/mockups/isense-mobile-polish/_shared/sun-context.ts",
+      "sha256": "72530a4955c31fa64e48d4b8dc1c6369e9911f0a37be14d9f51bce1d37020468",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/mockups/isense-mobile-polish/_shared/types.ts",
+      "sha256": "a4b81a0bb24a9b5cdd425647ea878550f44e3bb3a2ab5b1066ce84f1a7086781",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/mockups/isense-mobile-polish/_shared/use-places-autocomplete.ts",
+      "sha256": "91ce374e29984120046d00961564aa03c465c0680ead7de2e534d88b1ddccd98",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/mockups/isense-native-preferences/Current.tsx",
+      "sha256": "7df7530441527d06a46edd94ec89f4118c7fa96230527d2901812e3c827ab5f7",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/mockups/isense-native-preferences/_group.css",
+      "sha256": "87ec48f8d599a4479c077ef3a04f110a5589f56b9f82586508c4d04a411e9f6f",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/mockups/isense-native-preferences/_shared/comfort-preferences.tsx",
+      "sha256": "7dd4371736c5cc5fdf128c12b293c0a9b2617d1d7c86df9ad0ac95db74c372f3",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/mockups/isense-native-preferences/_shared/mobile-navigation.tsx",
+      "sha256": "51c18402f228900fb739ba3deb0e4135130532b02b14c36252b497b1010fcccd",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/mockups/isense-native-preferences/_shared/physical-sensory-levels.ts",
+      "sha256": "826ef8aa32ff19bc1f0fd26f0e93e2293bac2b91cd148994b0954f347d3fd28e",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/mockups/isense-native-preferences/_shared/preference-presets.ts",
+      "sha256": "f758d795092eb5bbc7bcadc6f886120eb3e53bd20fa08ee00308ef6341c30403",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/mockups/isense-native-preferences/_shared/preferences-screen.tsx",
+      "sha256": "aecceb4dd628f1acd9a714ba81a060c0f294393570537dec210ce989101cac94",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/mockups/isense-native-preferences/_shared/route-scoring.ts",
+      "sha256": "9a1d103a63703f1e7af70f14be2200608942ab973412fde38382eb99423e90a5",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/mockups/isense-native-preferences/_shared/sensory-comfort.ts",
+      "sha256": "eea4d5af8a6baf6edeef14cd9099123e543074b2149b0d07cfd28d1095a5fdfb",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/mockups/isense-native-preferences/_shared/walking-time-input.ts",
+      "sha256": "97b919c9ea802f9d6492c678aa9a3d422289c3a8f7b5044e6c0e3a1e04cded24",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/mockups/isense-native-preferences/_shared/walking-time-limit.tsx",
+      "sha256": "5ad0f3202ae926a58c912eab3e11600a7f64bbdbdd11654dd099e6600ee9c196",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/accordion.tsx",
+      "sha256": "dcbfb3243a26096fc3e5f54039ccb5c4c23d9bb79a4d5846b4be75bf912f07d9",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/alert-dialog.tsx",
+      "sha256": "311bede35f785d7b1ecd7398986757e26409d1049352a94ccf83586b8603c92d",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/alert.tsx",
+      "sha256": "5950ac01377e7eedc94b00eb3fee678745e4cc1a72b5343867f0733d07db6660",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/aspect-ratio.tsx",
+      "sha256": "08b0aa0b05efc573c7d63363c03e83d4b101bfeb54140764e96ddea30659cfcc",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/avatar.tsx",
+      "sha256": "e78b35ed76c67d8ff50603fbe0dfa4fe600097bd860d89e65beea3e16683dad8",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/badge.tsx",
+      "sha256": "0564174ab513773e924dda521ce205535b05c7df9842e331ebbb59dd8b86022d",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/breadcrumb.tsx",
+      "sha256": "c3d3dcb0d82fc5e91d8830bac7fead905686fe876f1f42c3ed872bb0a6b6584e",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/button-group.tsx",
+      "sha256": "e3716d270e9ef6457b5cd29464ae00194abc8093c08ebf726c9204d7a69231d9",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/button.tsx",
+      "sha256": "4ea01d60fddbf1a0e66aa8234807d010378786b9bc5a934ed76a09edfa671040",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/calendar.tsx",
+      "sha256": "787a19c855cf2b826942d25440b63150c45094154c6a40e95abdb4109298b8b4",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/card.tsx",
+      "sha256": "525c4bb2c051987be64df0e92e1d90174912b219bf541e24ffbc4a3406de49e8",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/carousel.tsx",
+      "sha256": "5a4ff73c804e86c873382da80c453f1399006326ef042fb984c24162ec86666e",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/chart.tsx",
+      "sha256": "74005899ffa62cff5cc71ddd72a727bdc84a9bd9b7e26901e1f10d2ca8d90b62",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/checkbox.tsx",
+      "sha256": "ac389a574651c8bedffc10f80674c5fc2f02ab81291a5f4ad9c587d1f775fdce",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/collapsible.tsx",
+      "sha256": "f4cdd104de29928bfcd40b865c7d08eed9157a537fbb8b5e6d0921f02b63cc04",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/command.tsx",
+      "sha256": "5a57ebc119f2357b097098d22865d45de8fda623ee88fe98b99999838c13633b",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/context-menu.tsx",
+      "sha256": "5369fc82c51df067aec2934f5e711aaf9e3f745ed7baadd7ba4b77397dee2a1b",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/dialog.tsx",
+      "sha256": "f9c982ed8114c253c6ca738043d3f455e89c6d65569e90c9415776d6b4d6be14",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/drawer.tsx",
+      "sha256": "47ff6248307a4ac09bf7e00181a2a29f9f846691092e04cad03e15d749bc249b",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/dropdown-menu.tsx",
+      "sha256": "dc109123ecd59af01d07aa9f3a8e8a7085bd3f337388c5369799ab1ce6c2d45f",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/empty.tsx",
+      "sha256": "9f975582a0290dbc7ce6efa3b36b376a4c3f07863026c3b74c1e73cb0023acb8",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/field.tsx",
+      "sha256": "e463611ab049c5e9b1c61691d239e05970ead7b577a191b3f80aa6f8ffccada9",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/form.tsx",
+      "sha256": "d50adf86568f76246f0f319c9e1e858627475563f6c1e38f5df7d4ee23958559",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/hover-card.tsx",
+      "sha256": "00f9086b1412843e04e01d31d2fab00a25d65d789d1a382e41f01b1f3c167c3b",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/input-group.tsx",
+      "sha256": "131052098fa8b16b423192ec7dcc8c8506f0e7e81355134aae4c9044e1d3ef95",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/input-otp.tsx",
+      "sha256": "7c4799e3597f2780c09a39a1391b921fa16eaedd0476457492af734f58e2ec98",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/input.tsx",
+      "sha256": "6299a6a387dc55e528aec4342deaea0b83f1ea3a365c135a31a18ee55334f441",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/item.tsx",
+      "sha256": "90983640aa7cfef8217422347d8e14825cf55137c76369decacf440767f03188",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/kbd.tsx",
+      "sha256": "0c025e7736d435f563bfb44105e562629672799eb1f35cbf194148d06cd1a9f7",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/label.tsx",
+      "sha256": "2eac8fbb04002c42b0fbc4062d20d131e421796eaf65c37d2049e29e42ecbc5a",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/menubar.tsx",
+      "sha256": "def61eb2c47c9ec319423471f4ca20045e99549958211cacf832e4ede769e484",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/navigation-menu.tsx",
+      "sha256": "a06d96a582ac207ffcd38445d773c05e841d646efb185b5e9b65f73e5bd388c7",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/pagination.tsx",
+      "sha256": "9506dbd19ddd0c2810d1c9668a3f01606e39d9bf33ddc43329523c03bf629012",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/popover.tsx",
+      "sha256": "04cf38bf94abd3fe1b51e90227e6e235ca74776f6fc6af718bfc149e7424f582",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/progress.tsx",
+      "sha256": "6b3b4b69a1cb361076174892e9a96e1a09020307616965ef89f2f7e2495b57a9",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/radio-group.tsx",
+      "sha256": "9ba7808b7404cdf2159c81883a39290033bc4308f2978eb80797c92b87421301",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/resizable.tsx",
+      "sha256": "70d1e35a5fb0897af7063cdd841d8ed636e1c332ef7ea6469f0f175a5a93dddf",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/scroll-area.tsx",
+      "sha256": "d7d02600effca55d0dcadce8c09c97ebddda3a19c5fa1d52dc9f6f727b26c6b1",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/select.tsx",
+      "sha256": "3d93ae07a8f3fe121ba60f4439e26bd7859f247eb8bfcafcf4b4a8a069888eec",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/separator.tsx",
+      "sha256": "c956c4cca4b8442fa9314d6079b9f975e1ee39d5804aaf2966990f6258ac342a",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/sheet.tsx",
+      "sha256": "363f8e06aa5b53c6475f445117f60fa9294be79e9e4f1f5bf70886800188124e",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/sidebar.tsx",
+      "sha256": "53c5391594a46de2c3161de40eb56953ff6ddb09a9c64b877ea98af810b0ed35",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/skeleton.tsx",
+      "sha256": "87608e7cc815ad3d88e0b9de6c402bb37b58ea1b38636cf69709da1baff6e334",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/slider.tsx",
+      "sha256": "234e38fef59169bd02d8f5b56ca02e5ec13a0bd6846c328927b924e1299f7fb0",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/sonner.tsx",
+      "sha256": "771ab8637d27384c3ed030ba3be01a07b90c791c294eae06646250f8e81bc49e",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/spinner.tsx",
+      "sha256": "3e6e6e8d37fb4069f8e43e55318f8db06fbc36e6c8be0096da3c9337c1c798b9",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/switch.tsx",
+      "sha256": "ba5867cd3145af1290edd80bb56d4b6d61c6331aa8ef96ae0b85487f4499feaf",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/table.tsx",
+      "sha256": "a4a6972c2d47d465d7f02c1dc4a6cbfeda7a97e46479c1b0cebdaf26bf9b497a",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/tabs.tsx",
+      "sha256": "6f74706bc6b53f9e4bcebb5e7ab8743b616aef181edc7758b8ee905f9b2fdcd7",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/textarea.tsx",
+      "sha256": "ec7c92aaed80f6923a7caa4bfe4eead395b50a7001504fd7fbb0b9381804dae9",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/toast.tsx",
+      "sha256": "99f9f4a3e897f71d89b01c6772b2f5db51b888cecb2c8214fb2c2dbb2b3e6356",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/toaster.tsx",
+      "sha256": "1348f1a1f9820e2f1394b93cecc156a7e22f03636ab9270753985549aae2be74",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/toggle-group.tsx",
+      "sha256": "dba95ead40d163af6959198ded9853a2cc9282b2cb534980f99937a65edf4e2d",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/toggle.tsx",
+      "sha256": "955fa1bb97505b7a8bba3f7cff1991035a9afa0e1113f5d598147e6369dbf44b",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/components/ui/tooltip.tsx",
+      "sha256": "ce6afa34fb9dae51053a863b4c3f7c6e55f3da23b00149f31a8e4402bc963be0",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/hooks/use-mobile.tsx",
+      "sha256": "ad0936f84f1df79d3697bfbff9c18f8ad58431c1cbaf2359c6a853b0fcc9f28b",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/hooks/use-toast.ts",
+      "sha256": "eb23d01c5e502ae1e0772f4303147170811b11f498c7e8f0dc8424c0f3463c94",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/index.css",
+      "sha256": "3935d982402c0101e55b60039685383ade4fd25227d2f4149ba356e6c2932aa3",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/lib/utils.ts",
+      "sha256": "7c8c3dfc0cdd370d44932828eb067ef771c8fe7996693221d5d4b90af6d54f2d",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/src/main.tsx",
+      "sha256": "29946f51942fba11605c7595fd82b50b0d7e50148e0194fd356dacbc958f18ec",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/tsconfig.json",
+      "sha256": "bd0a1d0c1afa46c590350664a29d7848f6ccb91cfbd76426c40798437369fbf0",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/mockup-sandbox/vite.config.ts",
+      "sha256": "7de0f52b190e4d8f0854ed852e7a0d24420b4242e22423c6dd2712e7b0497cc7",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/.replit-artifact/artifact.toml",
+      "sha256": "e405bce57db250f1f98010715200594e7ddb5dd6d6042bc0f3d5733223ce0337",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/GOOGLE_MAPS_SETUP.md",
+      "sha256": "4f7ce26c2f19868e644cb0ab58519b628dd4dc1f7850fa9d3f6700ddacb3c40e",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/LOCATION-SEARCH.md",
+      "sha256": "458f97972a319cb0bc41112cfa162664bdbbe903798bc75adce6563a884e325c",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/PRODUCTION_SETUP.md",
+      "sha256": "30e7b926b3015e016882134c1492cafb8144b1f7c8c6c1491d989a975552c185",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/PUBLIC_ROUTING.md",
+      "sha256": "3543adaf68ee1cfd14b217667ad1197e1e91e7f0979d6dba151b918ff0b8f8f5",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/PWA.md",
+      "sha256": "5d5c7a63f4b98852d8fcc929eaf3922b41e1bb10f0d960a1e8013f311cc2bc96",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/SENSORY-RANGES.md",
+      "sha256": "a118a7d0630cc806fd27821f2c03ff3324217de31e404100e2d2a807877ef8a5",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/TIME-AWARE-SUN.md",
+      "sha256": "2b5061df970e00a262621ca29095485f1cb1932bce95ba8a1c3c2b350d3276c8",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/assets/isense-icon-source.jpg",
+      "sha256": "c44df28c3dcbc8d52e6a4ef3f1094ac0e0cbb557a228c9e90d513fc2338a81df",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/components.json",
+      "sha256": "3a5d5af62f05e6e3de6c5085f31ed4f49273d57cfeae4d69d00a2568c91f54f9",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/index.html",
+      "sha256": "35a7382f850c04d9b68dedd506aed72c87325c1106e585e29038853d7672e92c",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/package.json",
+      "sha256": "66c45173c8ee8d46e07fc454a8a347c2fe2928f787dad2899a6e37fd554fcbeb",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/public/icons/apple-touch-icon.png",
+      "sha256": "be3e7c476aa8e35564188ce07dad7c06a1dc8470d33db9d75b68ee1f651b8fc3",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/public/icons/favicon-32.png",
+      "sha256": "20a09a0eabaecd05b3e365fe9475a031b318433ce88feea2b12133c5d3fc5a99",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/public/icons/isense-192.png",
+      "sha256": "87348fbc4a96543df0c8e90764d68b98ced63c4fb8e4d83cde553df864745778",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/public/icons/isense-512.png",
+      "sha256": "f164053617fcb592cf18dbaf57d3d8ab17d92d8874987fed56e0405b61adfa55",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/public/icons/isense-maskable-512.png",
+      "sha256": "7032523bfbd4b9f4737cac44e126b377f196598de6d61d9cbdb043d80cd45431",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/public/observation-guide.md",
+      "sha256": "9acbfb6957410853b6286ebbf551a13b29a0003a19002fe404f1823bec5cf0d3",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/public/robots.txt",
+      "sha256": "16ceb5ee3e0dc13aa9adf31a3ebbe45a1d965b8c2b9f72eaf84e5911e140ed95",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/pwa.config.ts",
+      "sha256": "f4b433894f3871e17cc2f7de38a6b1e23c1d9f5ad604a9196611329e5bb359eb",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/scripts/audit-ranking.ts",
+      "sha256": "c41e83efd8b9049e0483dad2ba6a51484e51651bcb85a6e8d8f2b8c6573194c3",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/scripts/export-sensory-reference.mjs",
+      "sha256": "4c495af393fe3d72503389d5bace140cad0cf517e6646e106d169255f821fe7d",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/scripts/generate-app-icons.py",
+      "sha256": "13a71f18ad79fe51dd8e575d4334002e3491d5d14eecc92a8204b6e478cfc27b",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/scripts/verify-pwa.mjs",
+      "sha256": "7c85b184150c7d0a88311bddfad18eb5680dc3de9da8d8ae084ec600817293e0",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/App.tsx",
+      "sha256": "4c46412641db9afaec99a5b096073b16d14f5ec3241480cf2b58fb8b2a753ea9",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/comfort-preferences.tsx",
+      "sha256": "e49faa373f9df5dc1d869d4c3cca9b44ec8e2918d81d6a699ea426fcd04eb891",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/details-sheet.tsx",
+      "sha256": "e7d658a72b0ef97f004a5098054490c536706e24aa1971f6652cf2134bc7749f",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/environment-context.css",
+      "sha256": "44df823b88449b8c9236273152ef5128e4d1e40ab748c7d55edd0d2823e9ac67",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/environment-context.tsx",
+      "sha256": "b01fe4623b4a40ced319cf041f4a2db3ed7ab19e218f06ed8b35d42bf87f2780",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/error-boundary.tsx",
+      "sha256": "c1ea4d88be8cd206a46bd87f19edf025b2504a70a2b65cd9c438e4a0e62dafe0",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/google-campus-map.tsx",
+      "sha256": "76774c90091c88cad20498a861b3b4561c10270d440a327669dd95aa0838977a",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/install-isense.tsx",
+      "sha256": "874f9e8f120358d4ccfeb2e2536cdcb18491d2a4a8ba76a3ecdaa1f32ae09439",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/location-search.tsx",
+      "sha256": "581f7f01ce63ae01d9e30fb50dc36ab1e18d007ff4d9bead1603a8082a43da50",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/map-screen.tsx",
+      "sha256": "e6e27d15596b1c941f1a370282629e97aa1055579e477dc457c204147c059bb3",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/mobile-navigation.tsx",
+      "sha256": "52de547ae9be85cfe9827c5ec0e3726e8a3879d1d1258afb9c988a88913524c0",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/observation-evidence.tsx",
+      "sha256": "6e3ce98d1f05a17aad7fe5b9c52a6c1299ea9ca3f91ee4f2c92447adac910e89",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/observation-import.tsx",
+      "sha256": "e33dfbe8c3effaa89e5c62498a9c6802f7d9da46b7495014fe28335412e02081",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/places-search.css",
+      "sha256": "b347256060818a6e9fd7cc2f82992bbb3e9ad9cba2870b735e02f78503e9e90f",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/preferences-screen.tsx",
+      "sha256": "9242a89fdafe78b43f38c9d136032e8fd54dc23adfc9bdfadacde632c91191eb",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/reports-screen.tsx",
+      "sha256": "b80affe6fd34a8b6ec4614966d6702cda76c798733d147923300e6f96f1f589c",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/route-sun-transition-notice.css",
+      "sha256": "b5389f569df7ce0f0af973fce29da6e0cb95f1bd85e1a2bb0d87312833161d36",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/route-sun-transition-notice.tsx",
+      "sha256": "6f0a41257ac3dcd53d392e340b0df61fd3d359e9945a2ac5d3a324fb83359980",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/route-tradeoffs.tsx",
+      "sha256": "73e443f6f6e7c0bda39f72399225e0341c5e45df10f36dcf442325c7da041c9a",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/routes-screen.tsx",
+      "sha256": "a0a1e0758925e239e1390795093feca4a1b05c4065d2d292d0559a2a6a9a43b7",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/sensory-level-guide.tsx",
+      "sha256": "0a31db1c9cbfe307c895d139134f47d8a3fcad972f7010c213488253dcb5aed7",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/accordion.tsx",
+      "sha256": "8e4230a3e6d38bfab7b02f00f9e948c8c4038432c5b1bf2d0ea44dc8b5ce09cc",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/alert-dialog.tsx",
+      "sha256": "d76901a06e6881e94aa3847fde2602ee6f6ddc9f4cace9fa238627a5572bd24e",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/alert.tsx",
+      "sha256": "695369ea4d1ba4438dcedacaa8059b08b6463ac93170360f3bd42b983b7608e9",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/aspect-ratio.tsx",
+      "sha256": "2f5b0ed3cbcf84e526caad0c6b88d4457f8745a365c86cc74d924a1b6e013a36",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/avatar.tsx",
+      "sha256": "429f5e82fc3dcf265625650176f16ff9b35e55826183e1f1b2d4dc2a338f9b15",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/badge.tsx",
+      "sha256": "ba6f51e428a520f54e600fded4ea030a8099fa6a9a7b7110af8dca34795415d1",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/breadcrumb.tsx",
+      "sha256": "44b4de47f806eec0e3de5130f0399e83700eaf0bc8deb47af5ffda2bb11eb3f1",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/button-group.tsx",
+      "sha256": "b89025c11d08652597cb46b097d3e04658ad2c383bf81ed445c8182c0ed1b260",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/button.tsx",
+      "sha256": "9c20a340ca0c948d0164158eff44fca2e26343c8ee387ffc22f9cd677c59d27d",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/calendar.tsx",
+      "sha256": "1cdd1e62797356fe62f61f5521fcf0da8e3570b1120868ccca2b48370157fe46",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/card.tsx",
+      "sha256": "9fed39a53303c12fa6ac6f5f8813c1683e2198df9ee067cffbdfe69044cf3e4f",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/carousel.tsx",
+      "sha256": "4ae2f69bc2c1ce33c60b23ddc5382f4b93882dac07c2d18cce32fb148ff52c48",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/chart.tsx",
+      "sha256": "ac747c83483d742e207426a193ba5e2cf639fa18cd819c1f12d12329520c6c12",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/checkbox.tsx",
+      "sha256": "6b9e336fa42475bbb2ad4d76478afb8d2555e6e26bac245b9ccde62a9a033adc",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/collapsible.tsx",
+      "sha256": "aedcd10b62404b39d8d5544c01fee90aa7b66e7280bb80a215601ad198a1b8fd",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/command.tsx",
+      "sha256": "d8fb66e44f9f8de558f6a94c781f3d890871d76dbabcda64e6fab3c917b3237d",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/context-menu.tsx",
+      "sha256": "bdff38b45a6010e3db808c099c799bd61e6aca619378074e7b14b63c1291e4c9",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/dialog.tsx",
+      "sha256": "e0d3fa53f4cb7d8011ab09f2d198c24234062d24638fabf5142f5fbce57d2ba5",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/drawer.tsx",
+      "sha256": "152bc340ad982e84f851e3bc1a6b8e7ffd0151a7445c6ecf1b1e3e13cbc19210",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/dropdown-menu.tsx",
+      "sha256": "a79d5419ee174de35880340aef44d67847cee54846c058e02ac4a846b603c60f",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/empty.tsx",
+      "sha256": "48824b1b37bd406fa74f48db726a4f1d70cf88db5b3432f7b1d59f584f1c5dad",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/field.tsx",
+      "sha256": "c3787ffb045354e9f18e70d94890627caea94939a226e49c1e6cedee84a1e9e1",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/form.tsx",
+      "sha256": "1960463b09152760fdd99ca3eb16187408d064c7599ed66384b42d1613d3a3a3",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/hover-card.tsx",
+      "sha256": "e0b4e3f0126757a8eb5c6e436c8c041c049430abe9a2eb84b10154144b31c29c",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/input-group.tsx",
+      "sha256": "f4befbf9bf8ebd755b267c4db2b396be296adb95acca5c3fba54f6495bdedebd",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/input-otp.tsx",
+      "sha256": "b4891335e70920518cfbdef2aeb399f61477fbc4b3ffe3b8a2938f19074164cc",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/input.tsx",
+      "sha256": "03ac1648171bd5ad90dbc03e9ebff9a9cc77708bcc53bdac914b80eeebfe3032",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/item.tsx",
+      "sha256": "4a84cda22d692ee176f5128517a4003a63d11f907df445e7586ef034c88e8772",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/kbd.tsx",
+      "sha256": "4348a7a06a715e9e9673602cbb9ed89a6a4c6cbdd457d4c03db0f23a139d19eb",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/label.tsx",
+      "sha256": "fbc0c7db4221227941271a004bf71db5067aee9d8668f3351d91113cd5934c8c",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/menubar.tsx",
+      "sha256": "26dbbf36e4ffd87aab74e61dd1e3613f0c640988479679d53bacd8dbd15cc891",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/navigation-menu.tsx",
+      "sha256": "222020e1ac703ce01700d6e8822c6263932bc71c481d724b8ef53ccaae8ad63f",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/pagination.tsx",
+      "sha256": "dd65d2e59226a3f384014b596ae701aef50f130cb3061f4657e81c588587b8da",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/popover.tsx",
+      "sha256": "dc574442536873c8aa88733c348503c4599ad6ed0fc9898fd25406d94e095cca",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/progress.tsx",
+      "sha256": "74223bcccf7ca2ed026d197476abbe3d48fbc531c40f4252445f56954a270c75",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/radio-group.tsx",
+      "sha256": "8155d32dea5d4ddea2048b6d12f83fe4805d9bc87c97b994dbb0d040981334f2",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/resizable.tsx",
+      "sha256": "8e73dfb8b582944364d73b64ed03378016f20f7251f15f880dcf0fb140e1ad41",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/scroll-area.tsx",
+      "sha256": "73f5dedda781e5285092ea269f747378dbad8d95631eab638e15b3c31595dc59",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/select.tsx",
+      "sha256": "c64c9c1574c91f1eff922f3557e7609ba6c1d5e39959dbdecf8d386d7ae41990",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/separator.tsx",
+      "sha256": "2b129347f918742bf006099f7f56a9be373250de2ecc3ad201297563e3d1f807",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/sheet.tsx",
+      "sha256": "ef2ae35ccab1252c4eee56e67e9f1b2499b5bbfb3ae39037d8d4be39915c272f",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/sidebar.tsx",
+      "sha256": "de7566e708ba8bf34cb4a78fc018c784315c9d7a16d70e66255f8c72caf9d1db",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/skeleton.tsx",
+      "sha256": "d78130b2e311a750e7bb524e66e3af4c04e2ab02b04fd68539c1afd0bbb47152",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/slider.tsx",
+      "sha256": "ecac74b8f3a044ba7a9e4eb0bdbfdf48be92483a32d2c414c5078c9f38e1f369",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/sonner.tsx",
+      "sha256": "de5a5d9ae404545fcb0f21123530ffcf89d24a47812c70b3ca1376591e28dbdd",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/spinner.tsx",
+      "sha256": "4458ea392b32f439cd4c64b9593846f339370fa1295c04f9003f05c1f3386689",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/switch.tsx",
+      "sha256": "f81bc9b5ce2d6a92b6b2f1f3376c0489f30f7073081a1d9d6c56553880f44c58",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/table.tsx",
+      "sha256": "dd29f5ef260af67ed09c84505495e3fddbad14009e3b3ce689d0c354ffaf55d3",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/tabs.tsx",
+      "sha256": "320609101fbaa6cccda0b899154cb510fa322926cfdbaf07e33b79c00c83fcd6",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/textarea.tsx",
+      "sha256": "63fb699771afe60c5073ed50e1a042d7d7f21eefd12d15bcb750cf3230985011",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/toast.tsx",
+      "sha256": "04d4ef720079342e2f4380c22683f1544bd8e93a581fb55e447458f04a6127d5",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/toaster.tsx",
+      "sha256": "d34c7cd51482ddd5703a13378d9ac69b3459a304581e42f56ac2c696e53163ac",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/toggle-group.tsx",
+      "sha256": "6d7aca86245edf5d0a8f6f3ed73bd19316f4865425891eabccd6f3e37e59519e",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/toggle.tsx",
+      "sha256": "5800d2099224ef90892e8c1d972d2a0964391c33cd43d7f5c6abf5cd42e023e1",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/ui/tooltip.tsx",
+      "sha256": "e3c6ea9d4ecd62881af33564e25be013d35a8a7fa78475a6dcc98a06c7f894eb",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/components/walking-time-limit.tsx",
+      "sha256": "57574d845734c765ee8bd4250f45a4cec91e91db4bce8837c59c9d8197efea6e",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/data/campus-observations.json",
+      "sha256": "6e147dcd87b3ad0ea05b332008a99d50cc39388ef2a8918b1e4bcdb795c91358",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/data/historical-sensory-reference.json",
+      "sha256": "d8fd3d8c8b3be09d47f444ed73415a6ef2f71bb92a56a56047fd2794e169ebb4",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/hooks/use-app-navigation.ts",
+      "sha256": "1ede86ce33429224382500909ebf06fc2308321bdca3822ce1c70add759494bf",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/hooks/use-community-reports.ts",
+      "sha256": "63d292e77c0cf73f1217727d9db19ce00b2d117c8a6cf9e9109ba1449521d6ab",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/hooks/use-mobile.tsx",
+      "sha256": "82bff42ff087bd5dc90a5d17609cc428b8688de92d1333073a839af5ad3c9cbd",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/hooks/use-network-status.ts",
+      "sha256": "fcc4e35ce3b1dbd3e5e92afb32ef3d8356907b52404ff17086982870cca67702",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/hooks/use-places-autocomplete.ts",
+      "sha256": "d8c2dbc2b3b8e47f9e9464d45c91d0ad3331b0bfdbe331b5a2b0049e635597b4",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/hooks/use-saved-preferences.ts",
+      "sha256": "79dd78c5bf43e2fe8997054ab0d298ffcb357033829d281c3ba3866d44f664e6",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/hooks/use-sun-context.ts",
+      "sha256": "488a9b4e7e372dfd2e8e5e2be57e16f178fbc87568e5a2871e1597a5d234ea33",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/hooks/use-toast.ts",
+      "sha256": "12cce940e597e1d597f7063131acd19658d25e924904308bf719bde17b67e351",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/hooks/use-trip-planner.ts",
+      "sha256": "56469567f175c87ea2e852279b74a6b18c354bca8cd57ae31116e7a3ff4969ec",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/hooks/use-visual-viewport.ts",
+      "sha256": "a1f408d8c26ed51b87d633177ef1d4f2b12454e0c5fbaef225035ab0de2a9bd7",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/index.css",
+      "sha256": "50c673f21be88aa206ef31dd4b0e6f10af8245d8ca511a3fda1c66e5c03577a7",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/isense-redesign.css",
+      "sha256": "7aae052a527b29c5a383d80188d18654bbb04bfd5ead675985dac8a4f6b91335",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/lib/app-state.test.ts",
+      "sha256": "c3357c64166ef814a1042ab2aed85bf6850d8e7492f64867d6c0733bce4275eb",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/lib/app-state.ts",
+      "sha256": "e787daf6c99ef200d54af852a3f03366fa894b01aece63bdd4ba20f036fea5a0",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/lib/campus-locations.test.ts",
+      "sha256": "a1b8d503529b75ee1c80c16c3a04acccf4e1a0ad581e44ba6f2be612b037bf41",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/lib/campus-locations.ts",
+      "sha256": "aa8956db3732855acd0b0586b8eeaf03e29639c940eced2416d296f3a8a040c1",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/lib/campus-observations.test.ts",
+      "sha256": "10799102b459ef574c56d85e7ebe25bcff7bfc4b82e07ceb37218dd9aa4f5316",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/lib/campus-observations.ts",
+      "sha256": "2f9201258a0d867d7dcd4dacd7a37d965d5cd4e4a75aff4f8facc84be99f4392",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/lib/configuration-refresh.test.ts",
+      "sha256": "5ad55e34b3b65277fcb1aa92a64cda0da696111838aed86ed2de39d7ea4cf264",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/lib/configuration-refresh.ts",
+      "sha256": "b58f32629e68080d4bddcd853789187b2291fed63d4ef3df58432ca4b23096c2",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/lib/demo-routes.ts",
+      "sha256": "4973bbf2e44292744306000dc4540bf88b6dd458734cd29b95ba849159c6c7ba",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/lib/google-maps-sdk.ts",
+      "sha256": "989473f460619e610f13be884be42fe1becbf0c90e30fe6567e87d3e03a319a7",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/lib/google-maps-url.ts",
+      "sha256": "8656c439dfd416416ff042aa498e92f355403b40f24183b2651043df00d591d1",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/lib/google-service-error.ts",
+      "sha256": "7efe1d797a3ca1088bee65fac5fa7fbcb5f2b37eec9bcca44903dd712deb7b7c",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/lib/live-routes.test.ts",
+      "sha256": "5b08eb5a6984e472726e9e2bbe6866cdaed4bae1094255b70a3065591631b033",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/lib/live-routes.ts",
+      "sha256": "9cdfc16414c38adf01d3d05ff5460e7e1e5a5555b9a81e369ed7064fb2f8214e",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/lib/physical-sensory-levels.test.ts",
+      "sha256": "5bd85f38202476952494b6667e122d5503e2baa10e5a41b63803712b343cc189",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/lib/physical-sensory-levels.ts",
+      "sha256": "826ef8aa32ff19bc1f0fd26f0e93e2293bac2b91cd148994b0954f347d3fd28e",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/lib/places-search.test.ts",
+      "sha256": "37b028339cbeeb437a06aaa58cae21c4a486358ae348c35c261e9d61790af532",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/lib/places-search.ts",
+      "sha256": "f81a2521680fb679f9b7402c0afe13dda12f79520eb187199e3a1db4d49ff625",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/lib/preference-presets.test.ts",
+      "sha256": "048527c98e191acf4ab9515660797ae4d81c755f41d5301362feed1e9e112b9a",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/lib/preference-presets.ts",
+      "sha256": "f758d795092eb5bbc7bcadc6f886120eb3e53bd20fa08ee00308ef6341c30403",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/lib/pwa-environment.test.ts",
+      "sha256": "83488568450f3f184c0c5113d4fc213653f68fdec925736fdfa3319ebf263c73",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/lib/pwa-environment.ts",
+      "sha256": "f07f6197a30d75fb7e521d74e9e3b3339305992ac8eb3ef69cafe36bba5205f7",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/lib/ranking-audit.test.ts",
+      "sha256": "586d89b4696424e7aa997bc69835eab2d8c5e6b22c6d5854626a9f2a0c3b3cdf",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/lib/ranking-evidence.ts",
+      "sha256": "d322934b8c063252eab1a70739a0e81d84012af1770381528ca813946cafbd2b",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/lib/ranking-fixtures.ts",
+      "sha256": "092a19037c177b338e6661dc192b484aba124105232c87c41eef311097bfe731",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/lib/route-ranking-audit.ts",
+      "sha256": "d2e2f912c83941e824034fbad4d3459884d2f0d7b3a71e7673dee3fb69d5eb91",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/lib/route-scoring.test.ts",
+      "sha256": "60ae9dab434e14fde2391fca67400a821aa05fc5667239d65d4cce6bf8925f69",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/lib/route-scoring.ts",
+      "sha256": "3d0f9779c8bf894abe9a88dc08ae5e7cf94b7aaafc79774c1914e33136acc75d",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/lib/route-tradeoffs.ts",
+      "sha256": "8af294b260b055af89285bc584f6e0bcc5b91b4fa6675755592ef6227ecdba17",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/lib/routing-error.test.ts",
+      "sha256": "672e3b3deac2c81260b2198821620d4519f20b02b8fc4828b25c26380e3bc739",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/lib/routing-error.ts",
+      "sha256": "478157c3ea4398a4502b094f944537d743923be4f42caca693da498efe63ead5",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/lib/sensory-comfort.test.ts",
+      "sha256": "72e3efbd1ed6bdf96bce141bcef9e2dc4f6c4f6a5e03960d3180c46641e8615d",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/lib/sensory-comfort.ts",
+      "sha256": "eea4d5af8a6baf6edeef14cd9099123e543074b2149b0d07cfd28d1095a5fdfb",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/lib/sun-context.test.ts",
+      "sha256": "0eddc2f694ac9d1b27d33bc337a9f4611e47eafbe0f4c75a6e00dc6f46dda5b4",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/lib/sun-context.ts",
+      "sha256": "fcf661fac489787d6051923d315c02c4632bec367d6d3fe4faf97c92ee620466",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/lib/trip-sun-details.test.ts",
+      "sha256": "9dbe57b4c139abfdb6db8ecdd15a4bfe6f19b25eb1df2b1d60dc32e3ed05e1a5",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/lib/trip-sun-events.test.ts",
+      "sha256": "221d9f9025137e8650e38e9d2aa7c0d856587ac485b35a3d0a05855314375304",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/lib/utils.ts",
+      "sha256": "afc0e1dc0e142d6b81f688d91087f81a4b2db4240cf70f55b6e5e4dcc199ebf1",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/lib/walking-time-input.test.ts",
+      "sha256": "c8333118989e4edfd3d65cc3e59153a868dd43757f5de5bfe105be418b284b54",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/lib/walking-time-input.ts",
+      "sha256": "97b919c9ea802f9d6492c678aa9a3d422289c3a8f7b5044e6c0e3a1e04cded24",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/main.tsx",
+      "sha256": "df9866c0d29ed97efcb49661b8c753b2212f6d84860217317476fd0402770cf5",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/mobile-pwa.css",
+      "sha256": "95d7761a59397260d3118045b17560fb9dd106712f04a102991af55d2e8e6579",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/native-screens.css",
+      "sha256": "5ad6749e70a115ee7248dfeed3b897292a8c1fa6d765f16e938065335ad2b618",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/pages/not-found.tsx",
+      "sha256": "6aaea7a7125024440020566f3a14fde4f65149b1fd21f68c6a437b193e88c642",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/pwa.d.ts",
+      "sha256": "b4bdcc5ac14b7bce042ff947625a05034472d1fdc73fbb08b6e3648302537eeb",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/src/quiet-app.css",
+      "sha256": "57d7fca16b1fc017df3f241012ae9f9cf38d81f2043902f304a917a1e46443ff",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/tsconfig.json",
+      "sha256": "e0a2fd8a7f3bfc860ccab5623b1881e754eb02336612708ff8b59215e8c256c9",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "artifacts/quiet-campus/vite.config.ts",
+      "sha256": "f252e1851a403bb347df25bec385ee3d4e9d03c81f76b2a56e512f0ab2d9f5b7",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "docs/isense-mobile-ranking-review.md",
+      "sha256": "bf730566328bfaf6a53c4567e16a112bd3447545a6df432d8c1764096e1fdd58",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/api-client-react/package.json",
+      "sha256": "ae70f97a12d1f7e7cbb291b5ffd1d6893f0d7a0ff7721a21e615d47bccfad789",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/api-client-react/src/custom-fetch.ts",
+      "sha256": "3a5605ea89571cca7ea9412a230a40954e3a3f1d94d7a566271480165bf5e03c",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/api-client-react/src/generated/api.schemas.ts",
+      "sha256": "8ec382f24119696fbd9a0440a70a11561a78fcde74d7829c875bbabfe4624222",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/api-client-react/src/generated/api.ts",
+      "sha256": "6167b003762f6dc6f739b3f61589b2719ac2106a2a3458626895b47e2fb53a4c",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/api-client-react/src/index.ts",
+      "sha256": "60d0ec90b873fa40032432ba719e47d7221a45fc0bbb3093c9e79e6d3e8156ed",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/api-client-react/tsconfig.json",
+      "sha256": "a00fda842228e3478705abcf2c76d9641f5d6263cd5d2df0b613d5379088ad73",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/api-spec/openapi.yaml",
+      "sha256": "e5963680028c9920aebb5d3e503dbba4048e911256e888fa46fd9068b04ba512",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/api-spec/orval.config.ts",
+      "sha256": "17bbe15ed439c69c5a900398b2a146e4c8d8c79365479cb0ca9adc4dd4058776",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/api-spec/package.json",
+      "sha256": "2c0f6e86a51350d26ad83e057f0ae4a886b1d8fd484965b34a6a762c0495f088",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/api-zod/package.json",
+      "sha256": "07009861b2ba8decccb4e9d78d743cb7273bd91915231b5eb1463b296efca13e",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/api-zod/src/generated/api.ts",
+      "sha256": "2ca5bfc2f4637f8f15430cd04f44aeb28a8c811a087fba5f416e5ecc5d7b07b6",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/api-zod/src/generated/types/communityReport.ts",
+      "sha256": "8c93df98a1e6c93915239ea6841b38ff7b0f5acf227c9ad3cc0ce45603d8d38b",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/api-zod/src/generated/types/communityReportInput.ts",
+      "sha256": "5d696d75424b87040c3b02b75d3918b0b0d19707275e21f069f7dd487a98abe2",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/api-zod/src/generated/types/communityReportInputCrowds.ts",
+      "sha256": "f782f8c22518fc8def3b344e3543bbb69cbd739e6218f03a8f127858b8bfe188",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/api-zod/src/generated/types/communityReportInputNoise.ts",
+      "sha256": "90454551559001c03e5935d3f07bdc517ccf5ee1d11724d9026993b56d839524",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/api-zod/src/generated/types/communityReports.ts",
+      "sha256": "7335c551f562d336897e7f3d8825dcfbc76cdd52c8cd8b2f411b8c54d62544cd",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/api-zod/src/generated/types/communityReportsStorage.ts",
+      "sha256": "c351705137df5b36a19e400ded7600285739746a00a97871957282adce96d20c",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/api-zod/src/generated/types/googleMapsConfig.ts",
+      "sha256": "84f9f603c8bf3d3676a8d0840540aa74f3ff0cb9c58a3566050a2315df4f3ad7",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/api-zod/src/generated/types/healthStatus.ts",
+      "sha256": "cbf343355d947ee2a2fc7c6ff659866f5620a9fd2f1c84de981041f5b4aefc87",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/api-zod/src/generated/types/index.ts",
+      "sha256": "e7a21820ebacc9dd9f796e9f81df59dd202c4d899ea5c995880daa29bdaa7ab6",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/api-zod/src/generated/types/routeEndpoint.ts",
+      "sha256": "5dd105e2be98dedac484c6c7b4e3a7d80a1df366d8745b68ad055c7d1ca185e7",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/api-zod/src/generated/types/routePoint.ts",
+      "sha256": "034a5e8fda46e8ecfc59b002c50257147a11ed34ab9f7659f995aab55e2d855a",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/api-zod/src/generated/types/routingFailure.ts",
+      "sha256": "0471f2af75c36b2947f50dbcc8045a64b4b5181c342c024ea256124de6859fad",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/api-zod/src/generated/types/routingFailureDetail.ts",
+      "sha256": "a3f8da259df428181ae1b501ce3de75a91b6134e87efa9be6f4e31e66e0c3371",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/api-zod/src/generated/types/walkingRoute.ts",
+      "sha256": "592d8eaff94cc1f473ee242794ce2bd27fabb3e906a05f9cb33ed2ef7abcb26f",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/api-zod/src/generated/types/walkingRouteInput.ts",
+      "sha256": "2d6fe961555a4b3b2111c0c83b0c31fd61329534a6343a2d6650be2b7cc76a3b",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/api-zod/src/generated/types/walkingRouteResult.ts",
+      "sha256": "731da710749a7ee144d13810c666f02e5c67d6c9d3f9cf92d82e654daed064d2",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/api-zod/src/generated/types/walkingRouteResultRawResponse.ts",
+      "sha256": "31e1549306eeebed78075fef139ce08553f6933428b4d61ad1896ba1d7090d71",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/api-zod/src/generated/types/walkingRouteResultSource.ts",
+      "sha256": "12926f74711543f5d20662d0e875810b732d6adfc08e237baf0f452cbd22dba8",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/api-zod/src/index.ts",
+      "sha256": "effb7d33b5df99004c9b1a840944516ca3ad65cbcd3ae2fcc717c505814ce039",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/api-zod/tsconfig.json",
+      "sha256": "bb52c0e8b13e658570a208d946cb874fdf2b8d990f7c228f96fb24254c9c5a95",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/campus-routing/README.md",
+      "sha256": "2d956d8991a99e6e288672c82aed079ce73e60343aa07a96b77f38e0dcfd417d",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/campus-routing/package.json",
+      "sha256": "7db768ef6c33e62375b2ff93249653840a84cc009a5df35414bb2941ca3dd49e",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/campus-routing/server/google-error.js",
+      "sha256": "fbaf606010d1d443a76f8dc5415e48f5c39e6e947472508dbbd14f0ecd2dda7c",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/campus-routing/server/google-routes.js",
+      "sha256": "a7549e83bf9a430e017e3db2c54bb5ddeb98d7856d4e545ea9cae1d036edb0e3",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/campus-routing/server/proxy.d.ts",
+      "sha256": "9d43346c9f38fc5ff6f09ce1c2dc67ec7d751efe3ad832d3acf2e493c0459f02",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/campus-routing/server/proxy.js",
+      "sha256": "1c99ae77be9cd8ec5d21b42cbd5594b0c92ef07c1008175e978ae432f9645421",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/campus-routing/src/routing.d.ts",
+      "sha256": "6d62a21a7cd36e62636c2f7111eddc79086f73cd451b66fbec7e9af621bb13c9",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/campus-routing/src/routing.js",
+      "sha256": "c1834ecefe303d2765a9efc1b42eca1be0581a316f286cab513dd20f9eff0d1c",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/campus-routing/src/waypoints.d.ts",
+      "sha256": "7fa1f808102ea60da6879142af658d435e0425c57586c217d0f5daf03df866c2",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/campus-routing/src/waypoints.js",
+      "sha256": "412f6fcaf6184b565c48a2f1a8d589dcc30b6602bcce5e4b0936783841b5ac48",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/campus-routing/tsconfig.json",
+      "sha256": "f3fa454b23f35a8c8deaeb670d9de9aef75d1863c505ffbfa238726cc001af1d",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/db/drizzle.config.ts",
+      "sha256": "57862221556f24a1accd28b283876930c403ad7c86b79d87cfb5c9c200ba6258",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/db/package.json",
+      "sha256": "9c4e93f8f9f9fa57b581a4230c184d56a130a79ae36e377c2d4720edcbcbf15c",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/db/src/index.ts",
+      "sha256": "fc285bc83108137ba57c4c2774a35053e3c25fda1292c3d7a16a57d43dd9679c",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/db/src/schema/community-reports.ts",
+      "sha256": "d862bcd02d30b21f812330d3afb8ae0bc6e7d5a30314eab0e3b116d7dd7f7029",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/db/src/schema/index.ts",
+      "sha256": "4c21969815a64748dd96027e3496e3cc265363a76e97b91eae56febadd871900",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/db/src/schema/routing-budget.ts",
+      "sha256": "a8209230a24ecf0d89b0581d866ac469fc9a4210b0491634e391c6cac8518b46",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "lib/db/tsconfig.json",
+      "sha256": "69c976d11de35f0ac391934625beeccdd1b2689ba5d0f14c54b5384d4c30a9c9",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "package.json",
+      "sha256": "0eee75b762d97c72cbe42fafdb2229dcfccb8bd11f4b4cdd01803eb8b52e9686",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "pnpm-lock.yaml",
+      "sha256": "27e90b53e664723ea62c3f1b8a8c4143d7b4b192a46808fb392966f1f06ac35a",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "pnpm-workspace.yaml",
+      "sha256": "eca3f132f1e94e1062b3c05d5b662cd00fea5d0d4f2c4ef61f6753711df233b5",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "40375c0159a88d72aee8453540e9e548341f20862e7b7be48feb018a6d417a71",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "replit.md",
+      "sha256": "21a531207c7ccc9ee881f8e0ce7e83ddd0c1b6e8fc2547bc563e648b56348f3e",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "scripts/package.json",
+      "sha256": "e321044da26540ad84f56fcbe985013f369c3b18ba06c233f1db99f488df0f8b",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "scripts/post-merge.sh",
+      "sha256": "b9e43e43dcbacd4bd26b84d68dd616270a6aacbd51ab25a2f6b1b81484eadc37",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "scripts/src/hello.ts",
+      "sha256": "9a865c3de9900891e697e1ee8632dd565ce69bd7cb6b610e48b26bc0ee9e81e9",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "scripts/tsconfig.json",
+      "sha256": "636dea76ed898c62e56d6657ed97bb3edc85feb0ea8256b5198849d5c6cf462a",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "tsconfig.base.json",
+      "sha256": "2dfaa6f6168f618e0e6deff048c17e4f5f73d59325bd935d471905ae6773585c",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "88cd4f3525e6292794ffe8e319d8bb176ded62cb1cf89380d7fbc1b45c6cfc34",
+      "git_status": "tracked; copied without rewriting"
+    },
+    {
+      "path": "uv.lock",
+      "sha256": "e79d465460c73314ceb97f9225f0436420b343ebed19e00d9d8c674dc4eb90e5",
+      "git_status": "tracked; copied without rewriting"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+modules = ["nodejs-24", "python-base-3.13", "postgresql-16"]
+
+[deployment]
+router = "application"
+deploymentTarget = "autoscale"
+
+[deployment.postBuild]
+args = ["pnpm", "store", "prune"]
+env = { "CI" = "true" }
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "routing-safety"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "typecheck"
+
+[[workflows.workflow]]
+name = "routing-safety"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "scripts/node_modules/.bin/tsx --test artifacts/api-server/src/lib/*.test.ts artifacts/api-server/src/lib/*.test.mjs artifacts/quiet-campus/src/lib/*.test.ts"
+
+[workflows.workflow.metadata]
+isValidation = true
+
+[[workflows.workflow]]
+name = "typecheck"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "pnpm run typecheck"
+
+[workflows.workflow.metadata]
+isValidation = true
+
+[agent]
+stack = "PNPM_WORKSPACE"
+expertMode = true
+
+[postMerge]
+path = "scripts/post-merge.sh"
+timeoutMs = 20000
+
+[userenv]
+
+[userenv.shared]
+
+[userenv.development]
+GOOGLE_MAPS_API_ENABLED = "true"
+GOOGLE_ROUTES_API_ENABLED = "false"
+
+[userenv.production]
+GOOGLE_PLACES_API_ENABLED = "true"
+ROUTING_REQUEST_RESERVE_CENTS = "2"
+
+[nix]
+channel = "stable-25_05"
+packages = ["freetype", "lcms2", "libimagequant", "libjpeg", "libtiff", "libwebp", "libxcrypt", "openjpeg", "tcl", "tk", "zlib"]
